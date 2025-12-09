@@ -1,0 +1,70 @@
+# -------------------------------------------
+# OS FILES
+# -------------------------------------------
+.DS_Store
+Thumbs.db
+
+# -------------------------------------------
+# IDE / EDITOR FILES
+# -------------------------------------------
+.vscode/
+.idea/
+*.code-workspace
+
+# -------------------------------------------
+# LARAGON / LOCAL SERVER FILES
+# -------------------------------------------
+*.log
+*.tmp
+*.cache
+
+# Laragon auto-generated configs
+laragon.ini
+logs/
+tmp/
+
+# -------------------------------------------
+# ENVIRONMENT & CONFIG (DO NOT UPLOAD PASSWORDS)
+# -------------------------------------------
+.env
+.env.*
+config.php
+
+# -------------------------------------------
+# COMPOSER / PHP DEPENDENCIES
+# (if you ever install composer in the future)
+# -------------------------------------------
+vendor/
+
+# -------------------------------------------
+# NODE FILES (if you add npm later)
+# -------------------------------------------
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# -------------------------------------------
+# BUILD / DIST FILES (if you ever generate assets)
+# -------------------------------------------
+dist/
+build/
+.cache/
+*.min.css.map
+*.min.js.map
+
+# -------------------------------------------
+# UPLOADS (OPTIONAL — uncomment if needed)
+# -------------------------------------------
+# uploads/
+# user_images/
+
+# -------------------------------------------
+# SYSTEM BACKUP FILES
+# -------------------------------------------
+*.bak
+*.zip
+*.rar
+*.7z
+*.tar
+*.gz
