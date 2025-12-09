@@ -1,0 +1,9 @@
+{
+    "intelephense.files.associations": [
+        "**/*.php"
+    ],
+    "intelephense.files.include": [
+        "**/*.php",
+        "_intelephense_helpers.php"
+    ]
+}

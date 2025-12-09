@@ -1,0 +1,1609 @@
+/* ------------------------------------------------------------------
+    GLOBAL RESET + BASICS
+------------------------------------------------------------------ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Nunito", sans-serif;
+}
+
+body {
+    background: #fff;
+    color: #444;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Fade-in animation helpers */
+.hidden {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 0.6s ease;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ------------------------------------------------------------------
+    NAVIGATION
+------------------------------------------------------------------ */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 40px;
+    background: #ffffffdd;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 4px 20px #0000000f;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+nav .logo img {
+    max-height: 60px;
+    width: auto;
+    object-fit: contain;
+}
+
+nav ul {
+    display: flex;
+    gap: 24px;
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 17px;
+    padding: 6px 12px;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    background: #ffe4ec;
+    color: #c74d7c;
+}
+
+/* MOBILE NAV */
+.mobile-menu-btn {
+    display: none;
+    font-size: 32px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .mobile-menu-btn {
+        display: block;
+    }
+
+    nav ul {
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        flex-direction: column;
+        background: white;
+        padding: 0;
+        border-radius: 12px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        position: absolute;
+        right: 20px;
+        top: 75px;
+        width: 220px;
+        transition: max-height 0.3s ease, opacity 0.3s ease;
+    }
+
+    nav ul.menu-open {
+        max-height: 350px;
+        opacity: 1;
+        padding: 15px 0;
+    }
+}
+
+/* ------------------------------------------------------------------
+    HERO SECTION
+------------------------------------------------------------------ */
+
+.hero {
+    height: 88vh;
+    background: url("/img/hero_bg.webp") center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-kids {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 550px;
+    opacity: 0.18;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 3;
+    max-width: 800px;
+}
+
+.hero-logo {
+    height: 110px;
+    margin-bottom: 20px;
+    animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.hero h1 {
+    font-size: 42px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 20px;
+    color: #6b6b6b;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* HERO RESPONSIVE */
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 80px 20px;
+        height: auto;
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+
+    .hero-kids {
+        width: 300px;
+        opacity: 0.15;
+        filter: blur(1px);
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .hero p {
+        font-size: 17px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-kids {
+        width: 240px;
+        opacity: 0.13;
+    }
+}
+
+/* ------------------------------------------------------------------
+    BUTTONS
+------------------------------------------------------------------ */
+
+.btn-primary {
+    background: #FF8BA7;
+    color: white;
+    padding: 14px 28px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background: #ff6e94;
+    transform: translateY(-3px);
+}
+
+.btn-secondary {
+    background: #B4E4D8;
+    color: #2b6d63;
+    padding: 14px 28px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.btn-secondary:hover {
+    background: #97d6c8;
+    transform: translateY(-3px);
+}
+
+.btn-outline {
+    padding: 10px 22px;
+    border: 2px solid #FF8BA7;
+    border-radius: 30px;
+    color: #FF8BA7;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn-outline:hover {
+    background: #FF8BA7;
+    color: white;
+}
+
+/* ------------------------------------------------------------------
+    ABOUT SECTION
+------------------------------------------------------------------ */
+
+.about {
+    padding: 80px 40px;
+}
+
+.about-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.about-text h2 {
+    font-size: 36px;
+    margin-bottom: 18px;
+}
+
+.about-img img {
+    width: 380px;
+    border-radius: 22px;
+    box-shadow: 0 6px 20px #00000020;
+}
+
+@media (max-width: 768px) {
+    .about-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .about-img img {
+        width: 70%;
+    }
+}
+
+/* ------------------------------------------------------------------
+    SERVICES SECTION
+------------------------------------------------------------------ */
+
+.services {
+    padding: 80px 40px;
+    text-align: center;
+}
+
+.services h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+}
+
+.service-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 22px;
+    box-shadow: 0 5px 20px #00000015;
+    transition: 0.3s;
+    text-align: center;
+}
+
+.service-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 26px #00000018;
+}
+
+.service-card img {
+    height: 70px;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 1024px) {
+    .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ------------------------------------------------------------------
+    WORKSHOP TEASER
+------------------------------------------------------------------ */
+
+.workshop-teaser {
+    padding: 70px 30px;
+    text-align: center;
+    background: url("/img/workshop_bg.webp") center/cover no-repeat;
+    position: relative;
+    overflow: hidden;
+}
+
+.workshop-img {
+    position: absolute;
+    right: -30px;
+    top: 20px;
+    width: 360px;
+    opacity: 0.22;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.workshop-content {
+    position: relative;
+    z-index: 2;
+}
+
+@media (max-width: 768px) {
+    .workshop-img {
+        width: 240px;
+        opacity: 0.14;
+        filter: blur(1px);
+    }
+}
+
+/* --------------------------------------------------------
+    LOGIN PAGE STYLES — Modern & Playful
+-------------------------------------------------------- */
+
+.login-section {
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #FFE4EC, #FADADD, #E5D3FF);
+}
+
+.login-card {
+    background: #ffffff;
+    width: 100%;
+    max-width: 380px;
+    padding: 35px 30px;
+    border-radius: 24px;
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.12);
+    text-align: center;
+    animation: fadeIn 0.6s ease;
+}
+
+.login-icon {
+    width: 80px;
+    margin-bottom: 15px;
+    animation: float 3s infinite ease-in-out;
+}
+
+.login-card h2 {
+    font-size: 28px;
+    margin-bottom: 8px;
+    color: #444;
+}
+
+.login-sub {
+    color: #777;
+    margin-bottom: 25px;
+    font-size: 15px;
+}
+
+.login-error {
+    background: #ffd1d1;
+    color: #a40000;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 14px;
+    border: 1px solid #ddd;
+    margin-top: 6px;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.login-form input:focus {
+    border-color: #FF8BA7;
+    box-shadow: 0 0 0 3px #ff95b425;
+}
+
+.login-btn {
+    margin-top: 20px;
+    width: 100%;
+    font-size: 18px;
+}
+
+@media (max-width: 480px) {
+    .login-card {
+        padding: 28px 20px;
+    }
+}
+
+
+/* ------------------------------------------------------------------
+    FOOTER
+------------------------------------------------------------------ */
+
+footer {
+    padding: 22px;
+    text-align: center;
+    background: url("/img/footer_bg.webp") center/cover no-repeat;
+    color: #555;
+}
+
+/* ------------------------------------------------------------------
+    CONTACT PAGE
+------------------------------------------------------------------ */
+
+.contact {
+    padding: 80px 20px;
+}
+
+.contact-container {
+    max-width: 700px;
+    margin: auto;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.contact-sub {
+    color: #666;
+    margin-bottom: 40px;
+    font-size: 18px;
+}
+
+.contact-form {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 22px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-size: 15px;
+    color: #444;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 14px;
+    border: 1px solid #ddd;
+    margin-top: 6px;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #FF8BA7;
+    box-shadow: 0 0 0 3px #ff8ba725;
+}
+
+.form-success {
+    margin-top: 20px;
+    padding: 10px 18px;
+    background: #c8f7d2;
+    color: #0b7a3a;
+    border-radius: 12px;
+    text-align: center;
+}
+
+/* Contact info block */
+
+.contact-info {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.contact-info h3 {
+    margin-bottom: 10px;
+}
+
+.contact-info p {
+    color: #555;
+    margin: 6px 0;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+    .contact-form {
+        padding: 20px;
+    }
+
+    .contact h2 {
+        font-size: 30px;
+    }
+
+    .contact-sub {
+        font-size: 16px;
+    }
+}
+
+/* FORCE NAV LOGO SIZE — FINAL FIX */
+nav .logo img {
+    height: 55px !important;
+    width: auto !important;
+    max-width: 55px !important;
+    display: block !important;
+    object-fit: contain !important;
+}
+
+.btn-about {
+    margin-top: 25px;
+}
+
+.btn-workshop-more {
+    margin-top: 50px;
+}
+
+.about-text a {
+    margin-top: 25px;
+    display: inline-block;
+}
+
+.workshop-content a.btn-primary {
+    margin-top: 25px;
+    display: inline-block;
+}
+
+/* --------------------------- */
+/*   WORKSHOP HERO SECTION     */
+/* --------------------------- */
+
+.workshop-hero {
+    position: relative;
+    width: 100%;
+    height: 320px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    padding: 40px 20px;
+    margin-bottom: 60px;
+}
+
+.workshop-hero-bg {
+    position: absolute;
+    inset: 0;
+    background: url('/img/workshop_bg.webp') center/cover no-repeat;
+    opacity: 0.45;
+    filter: blur(2px);
+    z-index: 0;
+}
+
+/* Text inside hero */
+.workshop-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 700px;
+}
+
+.workshop-hero-content h2 {
+    font-size: 40px;
+    font-weight: 800;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+.workshop-hero-content p {
+    font-size: 18px;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .workshop-hero {
+        height: 260px;
+    }
+
+    .workshop-hero-content h2 {
+        font-size: 30px;
+    }
+
+    .workshop-hero-content p {
+        font-size: 16px;
+    }
+}
+
+/* ------------------------------------------------------- */
+/*                 PLAYFUL WORKSHOP HERO                   */
+/* ------------------------------------------------------- */
+
+.workshop-hero {
+    position: relative;
+    width: 100%;
+    height: 420px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px;
+}
+
+.workshop-hero-bg {
+    position: absolute;
+    inset: 0;
+    background: url('/img/workshop_bg.webp') center/cover no-repeat;
+    opacity: 0.45;
+    filter: blur(2px);
+    z-index: 0;
+    animation: bgFloat 12s ease-in-out infinite alternate;
+}
+
+/* Soft parallax movement */
+@keyframes bgFloat {
+    0% {
+        transform: scale(1) translateY(0);
+    }
+
+    100% {
+        transform: scale(1.07) translateY(-12px);
+    }
+}
+
+/* --------------------------------------------- */
+/* FLOATING ELEMENTS — playful animations */
+/* --------------------------------------------- */
+
+.float-sun,
+.float-child,
+.float-talk,
+.float-family {
+    position: absolute;
+    z-index: 2;
+    opacity: 0.75;
+    pointer-events: none;
+}
+
+.float-sun {
+    top: 40px;
+    left: 60px;
+    width: 90px;
+    animation: float1 6s ease-in-out infinite;
+}
+
+.float-child {
+    bottom: 50px;
+    left: 100px;
+    width: 80px;
+    animation: float2 7s ease-in-out infinite;
+}
+
+.float-family {
+    top: 60px;
+    right: 80px;
+    width: 100px;
+    animation: float3 5.5s ease-in-out infinite;
+}
+
+.float-talk {
+    bottom: 40px;
+    right: 120px;
+    width: 70px;
+    animation: float4 8s ease-in-out infinite;
+}
+
+/* Slight variations per element */
+@keyframes float1 {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-14px) rotate(4deg);
+    }
+
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+}
+
+@keyframes float2 {
+    0% {
+        transform: translateY(0) rotate(-3deg);
+    }
+
+    50% {
+        transform: translateY(-16px) rotate(2deg);
+    }
+
+    100% {
+        transform: translateY(0) rotate(-3deg);
+    }
+}
+
+@keyframes float3 {
+    0% {
+        transform: translateY(0) rotate(1deg);
+    }
+
+    50% {
+        transform: translateY(-18px) rotate(-2deg);
+    }
+
+    100% {
+        transform: translateY(0) rotate(1deg);
+    }
+}
+
+@keyframes float4 {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-12px) rotate(3deg);
+    }
+
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+}
+
+/* --------------------------------------------- */
+/* HERO TEXT */
+/* --------------------------------------------- */
+
+.workshop-hero-content {
+    position: relative;
+    z-index: 5;
+    max-width: 760px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(8px);
+    border-radius: 22px;
+    box-shadow: 0 8px 28px #00000020;
+    animation: fadeInUp 1.2s ease-out forwards;
+    opacity: 0;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.workshop-hero-content h1 {
+    font-size: 46px;
+    font-weight: 900;
+    color: #444;
+    margin-bottom: 15px;
+}
+
+.workshop-hero-content p {
+    font-size: 20px;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* --------------------------------------------- */
+/* RESPONSIVE */
+/* --------------------------------------------- */
+
+@media (max-width: 768px) {
+    .workshop-hero {
+        height: 380px;
+        padding: 20px;
+    }
+
+    .float-sun {
+        width: 60px;
+        left: 20px;
+    }
+
+    .float-family {
+        width: 70px;
+        right: 30px;
+    }
+
+    .float-child {
+        width: 60px;
+        left: 30px;
+    }
+
+    .float-talk {
+        width: 60px;
+        right: 40px;
+    }
+
+    .workshop-hero-content h1 {
+        font-size: 34px;
+    }
+
+    .workshop-hero-content p {
+        font-size: 16px;
+    }
+}
+
+
+/* -----------------------------------------------------------
+   FLOATING BALLOONS
+----------------------------------------------------------- */
+
+.balloon {
+    position: absolute;
+    width: 80px;
+    opacity: 0.22;
+    z-index: 2;
+    pointer-events: none;
+    animation: balloonFloat 6s ease-in-out infinite;
+}
+
+@keyframes balloonFloat {
+    0% {
+        transform: translateY(0px) translateX(0px);
+    }
+
+    50% {
+        transform: translateY(-18px) translateX(8px);
+    }
+
+    100% {
+        transform: translateY(0px) translateX(0px);
+    }
+}
+
+.parallax-tilt {
+    transition: transform 0.1s ease-out;
+}
+
+/* -----------------------------------------------------------
+   BOUNCY CARDS ON SCROLL
+----------------------------------------------------------- */
+
+.service-card {
+    opacity: 0;
+    transform: scale(0.85) translateY(40px);
+    transition: 0.6s ease;
+}
+
+.service-card.visible {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+}
+
+.service-card:nth-child(3n+1) {
+    background: #FFEFF6;
+}
+
+.service-card:nth-child(3n+2) {
+    background: #E8FDF7;
+}
+
+.service-card:nth-child(3n+3) {
+    background: #FFF6E9;
+}
+
+/* Shared floating icons for homepage + workshops */
+
+.float-sun,
+.float-child,
+.float-talk,
+.float-family {
+    position: absolute;
+    z-index: 3;
+    opacity: 0.45;
+    pointer-events: none;
+    animation: float 6s ease-in-out infinite;
+}
+
+/* Positioning for homepage hero */
+.hero .float-sun {
+    top: 40px;
+    left: 50px;
+    width: 90px;
+}
+
+.hero .float-child {
+    bottom: 50px;
+    left: 80px;
+    width: 75px;
+}
+
+.hero .float-family {
+    top: 60px;
+    right: 80px;
+    width: 95px;
+}
+
+.hero .float-talk {
+    bottom: 60px;
+    right: 120px;
+    width: 70px;
+}
+
+/* Floating motion */
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-14px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/* ---------------------------------------------------------- */
+/*   PLAYFUL WORKSHOP TEASER ANIMATIONS                       */
+/* ---------------------------------------------------------- */
+
+/* Base */
+.workshop-teaser {
+    position: relative;
+    overflow: hidden;
+    padding: 90px 30px;
+    background: url("/img/workshop_bg.webp") center/cover no-repeat;
+}
+
+/* Floating icons */
+.wt-float {
+    position: absolute;
+    z-index: 2;
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+/* Individual positions */
+.wt-sun {
+    top: 20px;
+    left: 40px;
+    width: 90px;
+    animation: wtFloat1 6s ease-in-out infinite;
+}
+
+.wt-child {
+    bottom: 30px;
+    left: 70px;
+    width: 70px;
+    animation: wtFloat2 7s ease-in-out infinite;
+}
+
+.wt-family {
+    top: 50px;
+    right: 80px;
+    width: 90px;
+    animation: wtFloat3 5.5s ease-in-out infinite;
+}
+
+.wt-talk {
+    bottom: 40px;
+    right: 120px;
+    width: 75px;
+    animation: wtFloat4 8s ease-in-out infinite;
+}
+
+/* Floating motions */
+@keyframes wtFloat1 {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-14px) rotate(3deg);
+    }
+
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+}
+
+@keyframes wtFloat2 {
+    0% {
+        transform: translateY(0) rotate(-2deg);
+    }
+
+    50% {
+        transform: translateY(-16px) rotate(1deg);
+    }
+
+    100% {
+        transform: translateY(0) rotate(-2deg);
+    }
+}
+
+@keyframes wtFloat3 {
+    0% {
+        transform: translateY(0) rotate(1deg);
+    }
+
+    50% {
+        transform: translateY(-18px) rotate(-2deg);
+    }
+
+    100% {
+        transform: translateY(0) rotate(1deg);
+    }
+}
+
+@keyframes wtFloat4 {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-12px) rotate(3deg);
+    }
+
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+}
+
+/* Workshop image blur background */
+.workshop-img {
+    position: absolute;
+    right: -20px;
+    bottom: 0;
+    width: 360px;
+    opacity: 0.20;
+    z-index: 1;
+    filter: blur(1px);
+    pointer-events: none;
+}
+
+.workshop-content {
+    position: relative;
+    z-index: 5;
+}
+
+
+/* -----------------------------------------------------------
+   FLOATING BALLOONS
+----------------------------------------------------------- */
+
+.balloon {
+    position: absolute;
+    width: 60px;
+    opacity: 0.8;
+    animation: balloonRise 7s ease-in-out forwards;
+}
+
+@keyframes balloonRise {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: translateY(-150vh) scale(1.1);
+        opacity: 0;
+    }
+}
+
+/* ============================================================
+   CARD REVEAL (POP-UP ON SCROLL)
+============================================================ */
+
+.reveal-animate {
+    opacity: 0;
+    transform: translateY(40px) scale(0.95);
+    transition: opacity 0.6s ease, transform 0.6s cubic-bezier(.25, .8, .25, 1);
+}
+
+.reveal-animate.visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+/* ============================================================
+   CARD TILT EFFECT (HOVER)
+============================================================ */
+
+.tilt-card {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    perspective: 800px;
+}
+
+.tilt-card:hover {
+    transform: rotateX(6deg) rotateY(6deg) scale(1.03);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+}
+/* Fix tilt-card being invisible or displaced in admin panel */
+.admin-body .tilt-card {
+    transform: none !important;
+    opacity: 1 !important;
+}
+
+.admin-body .tilt-card:hover {
+    transform: rotateX(2deg) rotateY(2deg) scale(1.01); /* Optional weaker hover */
+}
+
+/* ============================================================
+   ADMIN MODE – CLEAN PANEL (hide playful public UI only)
+============================================================== */
+.admin-pop {
+    opacity: 0 !important;
+    transform: translateY(40px) scale(0.88) !important;
+    animation: adminPop 0.7s cubic-bezier(.18,.89,.32,1.28) forwards !important;
+}
+
+@keyframes adminPop {
+    0% {
+        opacity: 0;
+        transform: translateY(40px) scale(0.88);
+        filter: blur(3px);
+    }
+    60% {
+        opacity: 1;
+        transform: translateY(-6px) scale(1.04);
+        filter: blur(0);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+
+.admin-body {
+    background: linear-gradient(135deg, #FFF5F8, #F9F1FF, #ECFFF8);
+    min-height: 100vh;
+    padding-bottom: 100px;
+    overflow-x: hidden;
+}
+
+/* Hide playful homepage elements (SAFE) */
+.admin-body .float-sun,
+.admin-body .float-child,
+.admin-body .float-talk,
+.admin-body .float-family,
+.admin-body .hero-kids,
+.admin-body .workshop-teaser,
+.admin-body .puzzle-piece,
+.admin-body .balloon {
+    display: none !important;
+}
+
+/* ============================================================
+   STOP PUBLIC ANIMATIONS AFFECTING ADMIN UI
+============================================================== */
+
+/* Reveal elements must stay VISIBLE in admin */
+.admin-body .reveal-animate {
+    opacity: 1 !important;
+    transform: none !important;
+}
+
+/* Disable tilt effects for admin cards */
+.admin-body .tilt-card,
+.admin-body .tilt-hover {
+    transform: none !important;
+}
+
+/* ============================================================
+   ADMIN HERO (PLAYFUL, MODERN)
+============================================================= */
+
+.admin-hero {
+    position: relative;
+    width: 100%;
+    min-height: 260px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 40px 20px;
+}
+
+.admin-hero-bg {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, #EAF0FF, #F7E9FF);
+    opacity: 0.9;
+    z-index: 0;
+    animation: adminBgFloat 12s ease-in-out infinite alternate;
+}
+
+@keyframes adminBgFloat {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.06) translateY(-10px);
+    }
+}
+
+.admin-hero-content {
+    position: relative;
+    z-index: 5;
+    max-width: 650px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.65);
+    padding: 25px 35px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+    animation: fadeInUp 1s ease forwards;
+    opacity: 0;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.admin-hero-content h1 {
+    font-size: 32px;
+    font-weight: 900;
+    color: #444;
+}
+
+.admin-hero-content p {
+    margin-top: 8px;
+    font-size: 17px;
+    color: #666;
+}
+
+/* Floating admin icons */
+
+.admin-float {
+    position: absolute;
+    width: 75px;
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.admin-float-1 {
+    top: 40px;
+    left: 70px;
+    animation: floatA 6s infinite ease-in-out;
+}
+
+.admin-float-2 {
+    bottom: 50px;
+    right: 70px;
+    animation: floatB 7s infinite ease-in-out;
+}
+
+.admin-float-3 {
+    top: 90px;
+    left: 55%;
+    animation: floatC 5.5s infinite ease-in-out;
+}
+
+@keyframes floatA {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes floatB {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-18px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes floatC {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* ============================================================
+   ADMIN FORM CARD – MAIN STRUCTURE
+============================================================= */
+
+.admin-section {
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.admin-card {
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(12px);
+    padding: 35px;
+    border-radius: 22px;
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.12);
+
+    /* FORCE POP-UP ANIMATION */
+    opacity: 0 !important;
+    transform: translateY(40px) scale(0.92) !important;
+    animation: adminPop 0.6s cubic-bezier(.18, .89, .32, 1.28) forwards !important;
+
+    position: relative;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+
+.admin-form label {
+    font-size: 15px;
+    font-weight: 600;
+    color: #444;
+}
+
+.admin-form input,
+.admin-form textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 14px;
+    border: 1px solid #ddd;
+    margin-top: 6px;
+    font-size: 16px;
+    background: #fff;
+    outline: none;
+    transition: 0.3s;
+}
+
+.admin-form input:focus,
+.admin-form textarea:focus {
+    border-color: #FF8BA7;
+    box-shadow: 0 0 0 3px #ff8ba725;
+}
+
+.admin-form textarea {
+    min-height: 110px;
+    resize: vertical;
+}
+
+/* 2-column content layout */
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+@media (max-width: 768px) {
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.admin-btn {
+    margin-top: 20px;
+    width: 100%;
+    padding: 16px;
+    font-size: 20px;
+    border-radius: 18px;
+}
+
+
+/* ============================================================
+   PREMIUM HOVER EFFECT + LIFTING SHADOW
+============================================================= */
+
+.admin-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.16);
+}
+
+
+/* ============================================================
+   SHINE EFFECT – MOVING LIGHT REFLECTION
+============================================================= */
+
+.admin-card::after {
+    content: "";
+    position: absolute;
+    top: -60%;
+    left: -60%;
+    width: 220%;
+    height: 220%;
+    pointer-events: none;
+
+    /* MUCH STRONGER shine */
+    background: linear-gradient(
+        115deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.75) 45%,
+        rgba(255, 255, 255, 0.0) 100%
+    );
+
+    transform: rotate(25deg);
+    animation: adminShine 3.4s infinite ease-in-out;
+    opacity: 0.6; /* stronger */
+    mix-blend-mode: screen; /* makes it bright and glossy */
+}
+
+@keyframes adminShine {
+    0%   { transform: translateX(-120%) rotate(25deg); }
+    100% { transform: translateX(120%) rotate(25deg); }
+}
+
+/* ============================================================
+   ELEGANT FLOATING ICONS – SOFT ANIMATION
+============================================================= */
+
+.admin-float {
+    opacity: 0.35 !important;
+    animation: floatSoft 9s ease-in-out infinite;
+}
+
+@keyframes floatSoft {
+    0% {
+        transform: translateY(0) translateX(0);
+    }
+
+    50% {
+        transform: translateY(-12px) translateX(8px);
+    }
+
+    100% {
+        transform: translateY(0) translateX(0);
+    }
+}
+
+
+/* ============================================================
+   MOBILE TWEAKS
+============================================================= */
+
+@media (max-width: 768px) {
+    .admin-hero {
+        padding: 30px 16px;
+        min-height: 220px;
+    }
+
+    .admin-hero-content {
+        padding: 18px 20px;
+    }
+
+    .admin-hero-content h1 {
+        font-size: 24px;
+    }
+
+    .admin-hero-content p {
+        font-size: 15px;
+    }
+
+    .admin-card {
+        padding: 22px;
+    }
+}
+
+/* ============================================================
+   MOBILE BURGER MENU — WORKS ON ALL PAGES
+============================================================= */
+
+nav ul {
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+    overflow: hidden;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        max-height: 0;
+        opacity: 0;
+        flex-direction: column;
+        background: white;
+        padding: 0;
+        border-radius: 10px;
+    }
+
+    nav ul.menu-open {
+        max-height: 350px;
+        opacity: 1;
+        padding: 15px 0;
+    }
+
+    .mobile-menu-btn {
+        display: block;
+        cursor: pointer;
+        font-size: 26px;
+        padding: 10px;
+    }
+}
+
+/* FIX: Enable mobile menu inside admin pages */
+.admin-body nav ul.menu-open {
+    max-height: 350px !important;
+    opacity: 1 !important;
+}
+
