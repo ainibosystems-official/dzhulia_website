@@ -1,0 +1,1028 @@
+/* =====================================================
+   LOGIN PAGE – FINAL CLEAN VERSION
+===================================================== */
+
+body.page-id-32 .site-content {
+    max-width: 100% !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+body.page-id-32 .login-page {
+    min-height: calc(100vh - 80px);
+    padding: 140px 20px 80px;
+    background: linear-gradient(180deg, #f7eded 0%, #ffffff 100%);
+}
+
+/* center ONLY inner wrapper */
+body.page-id-32 .login-wrapper {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* WRAPPER */
+body.page-id-32 .login-wrapper {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* TITLE */
+body.page-id-32 .login-title {
+    font-size: 36px;
+    text-align: center;
+    color: #214b4f;
+    margin-bottom: 10px;
+}
+
+body.page-id-32 .login-subtitle {
+    text-align: center;
+    font-size: 18px;
+    color: #6a6262;
+    margin-bottom: 40px;
+}
+
+/* =====================================================
+   MAIN LAYOUT – 2 CARDS SYSTEM
+===================================================== */
+
+body.page-id-32 .login-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    margin-top: 40px;
+}
+
+body.page-id-32 .login-card,
+body.page-id-32 .register-card {
+    width: 100%;
+    background: #ffffff;
+    padding: 50px 45px;
+    border-radius: 28px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+    box-sizing: border-box;
+}
+
+/* =====================================================
+   FORM CARD
+===================================================== */
+
+body.page-id-32 .login-card h2,
+body.page-id-32 .register-card h2 {
+    font-size: 22px;
+    color: #214b4f;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: "Adys", sans-serif;
+}
+
+body.page-id-32 #login-form,
+body.page-id-32 .register-form {
+    width: 100%;
+    background: #ffffff;
+    padding: 36px !important;
+    border-radius: 24px;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.06);
+    border: none !important;
+    box-sizing: border-box;
+    font-family: "Adys", sans-serif !important;
+}
+
+/* =====================================================
+   LABELS
+===================================================== */
+
+body.page-id-32 #login-form label,
+body.page-id-32 .register-form label {
+    display: block;
+    font-family: "Adys", sans-serif !important;
+    font-size: 14px;
+    color: #214b4f;
+    margin-bottom: 8px;
+}
+
+/* =====================================================
+   INPUTS
+===================================================== */
+
+body.page-id-32 #login-form input,
+body.page-id-32 .register-form input {
+    width: 100%;
+    padding: 18px;
+    border-radius: 14px;
+    border: 2px solid #f1e4e4;
+    margin-bottom: 16px;
+    font-size: 16px;
+    font-family: "Adys", sans-serif !important;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 2;
+    background-color: #ffffff !important;
+}
+
+/* kill weird overlay layers */
+body.page-id-32 #login-form input::before,
+body.page-id-32 #login-form input::after,
+body.page-id-32 .register-form input::before,
+body.page-id-32 .register-form input::after {
+    display: none !important;
+}
+
+/* Chrome autofill fix */
+body.page-id-32 #login-form input:-webkit-autofill,
+body.page-id-32 #login-form input:-webkit-autofill:hover,
+body.page-id-32 #login-form input:-webkit-autofill:focus,
+body.page-id-32 #login-form input:-webkit-autofill:active,
+body.page-id-32 .register-form input:-webkit-autofill,
+body.page-id-32 .register-form input:-webkit-autofill:hover,
+body.page-id-32 .register-form input:-webkit-autofill:focus,
+body.page-id-32 .register-form input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 1000px #ffffff inset !important;
+    box-shadow: 0 0 0 1000px #ffffff inset !important;
+    -webkit-text-fill-color: #214b4f !important;
+    background-color: #ffffff !important;
+}
+
+/* remove validation/focus weirdness */
+body.page-id-32 #login-form input:focus,
+body.page-id-32 .register-form input:focus {
+    outline: none;
+    border-color: #214b4f;
+    box-shadow: none !important;
+}
+
+/* =====================================================
+   BUTTON
+===================================================== */
+
+body.page-id-32 #login-form input[type="submit"],
+body.page-id-32 .register-form button,
+body.page-id-32 .btn-logout,
+body.page-id-32 .logged-in-box .btn {
+    width: 100%;
+    background: linear-gradient(135deg, #7bc47f, #96d89b);
+    color: #ffffff;
+    border-radius: 999px;
+    padding: 16px;
+    font-weight: 700;
+    border: none;
+    font-family: "Adys", sans-serif;
+    font-size: 18px;
+    margin-top: 10px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    line-height: 1.2;
+}
+
+body.page-id-32 #login-form .login-submit {
+    margin: 0 !important;
+    padding: 0 !important;
+    text-align: center !important;
+}
+
+body.page-id-32 #login-form input[type="submit"] {
+    display: block !important;
+    width: 100% !important;
+    text-align: center !important;
+
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+/* =====================================================
+   LINKS
+===================================================== */
+
+body.page-id-32 .login-page a {
+    color: #214b4f;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+body.page-id-32 .login-page a:hover {
+    text-decoration: underline;
+}
+
+/* =====================================================
+   REMOVE PASSWORD STRENGTH (KILLS GREEN BAR)
+===================================================== */
+
+body.page-id-32 .woocommerce-password-strength,
+body.page-id-32 .woocommerce-password-hint {
+    display: none !important;
+}
+
+/* =====================================================
+   PASSWORD FIELD WITH ICON INSIDE
+===================================================== */
+
+body.page-id-32 #login-form p.login-password {
+    position: relative !important;
+}
+
+body.page-id-32 #login-form p.login-password input[type="password"],
+body.page-id-32 #login-form p.login-password input[type="text"] {
+    padding-right: 48px !important;
+}
+
+/* Real toggle button */
+body.page-id-32 #login-form .password-toggle-btn {
+    position: absolute !important;
+    right: 14px !important;
+    top: 50% !important;
+    transform: translateY(-30%) !important;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    width: auto !important;
+    min-width: 0 !important;
+    line-height: 1 !important;
+    cursor: pointer !important;
+    color: #214b4f !important;
+    font-size: 22px !important;
+    font-family: "Adys", sans-serif !important;
+    z-index: 5 !important;
+}
+
+body.page-id-32 #login-form .password-toggle-btn:hover,
+body.page-id-32 #login-form .password-toggle-btn:focus,
+body.page-id-32 #login-form .password-toggle-btn:active {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    color: #214b4f !important;
+    outline: none !important;
+}
+
+/* fallback icon if JS button is not injected */
+body.page-id-32 #login-form .login-password {
+    position: relative;
+}
+
+body.page-id-32 #login-form .login-password::after {
+    content: "👁";
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 16px;
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+/* =====================================================
+   REMEMBER ME ALIGN FIX
+===================================================== */
+
+body.page-id-32 #login-form .login-remember {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    margin: 10px 0 20px;
+    font-size: 14px;
+}
+
+body.page-id-32 #login-form .login-remember label {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    font-size: 14px !important;
+    cursor: pointer;
+    font-family: "Adys", sans-serif !important;
+    color: #214b4f !important;
+    margin-bottom: 0 !important;
+}
+
+body.page-id-32 #login-form .login-remember input[type="checkbox"] {
+    width: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* =====================================================
+   CUSTOM LOGIN FORM SUPPORT
+===================================================== */
+
+body.page-id-32 #custom-login-form input[type="text"],
+body.page-id-32 #custom-login-form input[type="password"] {
+    width: 100%;
+    padding: 14px;
+    border-radius: 12px;
+    border: 2px solid #f1e4e4;
+    font-family: "Adys", sans-serif;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+body.page-id-32 #custom-login-form .login-username input::placeholder,
+body.page-id-32 #custom-login-form .login-password input::placeholder {
+    color: #999;
+}
+
+body.page-id-32 #custom-login-form .login-remember {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+}
+
+body.page-id-32 #custom-login-form .login-remember label {
+    display: inline;
+}
+
+body.page-id-32 #custom-login-form .button,
+body.page-id-32 #custom-login-form input[type="submit"] {
+    width: 100%;
+    background: linear-gradient(135deg, #7bc47f, #96d89b);
+    color: #ffffff;
+    border-radius: 999px;
+    padding: 16px;
+    font-weight: 700;
+    border: none;
+    font-family: "Adys", sans-serif;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/* =====================================================
+   EXTRA BLOCKS
+===================================================== */
+
+body.page-id-32 .login-divider {
+    text-align: center;
+    margin: 18px 0;
+}
+
+body.page-id-32 .login-social {
+    margin-bottom: 18px;
+}
+
+body.page-id-32 .register-box {
+    text-align: center;
+}
+
+body.page-id-32 .btn-register,
+body.page-id-32 .btn-logout {
+    display: inline-block;
+    margin-top: 10px;
+}
+
+/* SOCIAL LOGIN */
+body.page-id-32 .login-social {
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* make it look minimal */
+body.page-id-32 .login-social a {
+    display: inline-block;
+    padding: 12px 20px;
+    border-radius: 12px;
+    border: 2px solid #f1e4e4;
+    background: #fff;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+body.page-id-32 .login-social a:hover {
+    border-color: #7bc47f;
+}
+
+/* 🔥 FIX tiny inner Woo form */
+body.page-id-32 #login-form {
+    width: 100%;
+}
+
+/* =====================================================
+   LOGGED IN BOX
+===================================================== */
+
+body.page-id-32 .logged-in-box {
+    max-width: 520px;
+    margin: 40px auto 0;
+    background: #ffffff;
+    padding: 40px 36px;
+    border-radius: 28px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+body.page-id-32 .logged-in-box p {
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #214b4f;
+    font-family: "Adys", sans-serif;
+}
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 768px) {
+
+    body.page-id-32 .login-title {
+        font-size: 26px;
+    }
+
+    body.page-id-32 .login-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    body.page-id-32 .login-card,
+    body.page-id-32 .register-card {
+        padding: 35px 25px;
+    }
+
+    body.page-id-32 #login-form,
+    body.page-id-32 .register-form {
+        padding: 24px !important;
+    }
+}
+
+/* =====================================================
+   PASSWORD FIELD WITH TOGGLE (REGISTER)
+===================================================== */
+
+.password-field {
+    position: relative;
+}
+
+.password-field input {
+    padding-right: 50px !important;
+}
+
+.password-toggle {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: #214b4f;
+    opacity: 0.6;
+}
+
+.password-toggle:hover {
+    opacity: 1;
+}
+
+/* =====================================================
+   PASSWORD TOGGLE – FINAL ALIGNMENT FIX
+===================================================== */
+
+.password-field {
+    position: relative;
+}
+
+.password-field input {
+    padding-right: 52px !important;
+}
+
+.password-field .password-toggle {
+    position: absolute !important;
+    right: 14px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    width: 24px !important;
+    height: 24px !important;
+    min-width: 24px !important;
+
+    padding: 0 !important;
+    margin: 0 !important;
+
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+
+    font-size: 16px !important;
+    line-height: 1 !important;
+    color: #214b4f !important;
+    opacity: 0.75;
+
+    cursor: pointer !important;
+    z-index: 20 !important;
+}
+
+.password-field .password-toggle:hover,
+.password-field .password-toggle:focus,
+.password-field .password-toggle:active {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+    color: #214b4f !important;
+    opacity: 1;
+}
+
+/* extra safety against global green button styles */
+body.page-id-32 .password-field .password-toggle,
+body.page-id-32 .password-field .password-toggle:hover,
+body.page-id-32 .password-field .password-toggle:focus,
+body.page-id-32 .password-field .password-toggle:active {
+    width: 24px !important;
+    height: 24px !important;
+    min-width: 24px !important;
+    padding: 0 !important;
+    margin-top: 0 !important;
+}
+
+body.page-id-32 .password-toggle {
+    all: unset;
+    cursor: pointer;
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #214b4f;
+    z-index: 50;
+}
+
+/* =====================================================
+   PASSWORD ICONS – FINAL PERFECT VERSION
+===================================================== */
+
+/* ensure parent is positioned correctly */
+body.page-id-32 #login-form p.login-password,
+body.page-id-32 .password-field {
+    position: relative !important;
+}
+
+/* =====================================================
+   PERFECT VISUAL CENTER (FINAL FIX)
+===================================================== */
+
+body.page-id-32 .password-toggle-btn,
+body.page-id-32 .password-field .password-toggle {
+    position: absolute !important;
+    right: 16px !important;
+
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    /* 🔥 THIS IS THE MAGIC */
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    width: 32px !important;
+    height: 32px !important;
+
+    font-size: 22px !important;
+    line-height: 1 !important;
+
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+
+    color: #214b4f !important;
+    opacity: 0.85;
+
+    cursor: pointer !important;
+    z-index: 50 !important;
+}
+
+/* =====================================================
+   PASSWORD ICONS – NO JUMP FIX
+===================================================== */
+
+body.page-id-32 .password-toggle-btn:hover,
+body.page-id-32 .password-toggle-btn:focus,
+body.page-id-32 .password-toggle-btn:active,
+body.page-id-32 .password-field .password-toggle:hover,
+body.page-id-32 .password-field .password-toggle:focus,
+body.page-id-32 .password-field .password-toggle:active {
+
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+
+    color: #214b4f !important;
+    opacity: 1 !important;
+
+    transform: translateY(-30%) !important;
+}
+
+/* 🔥 INPUT SPACING (CRITICAL FOR ALIGNMENT) */
+body.page-id-32 #login-form input,
+body.page-id-32 .register-form input {
+    padding-right: 60px !important;
+}
+
+/* reapply correct style after reset */
+body.page-id-32 .password-field .password-toggle {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 32px !important;
+    height: 32px !important;
+    font-size: 22px !important;
+    color: #214b4f !important;
+    opacity: 0.8;
+    z-index: 50 !important;
+}
+
+/* =====================================================
+   FORGOT / RESET PASSWORD
+===================================================== */
+
+.forgot-password-link {
+    margin-top: 18px;
+    text-align: center;
+}
+
+.forgot-password-link a {
+    color: #0097B2;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: 0.25s ease;
+}
+
+.forgot-password-link a:hover {
+    color: #00758a;
+    text-decoration: underline;
+}
+
+/* =====================================
+   FORGOT PASSWORD BOX
+===================================== */
+
+.forgot-password-box,
+.reset-password-box {
+    margin-top: 24px;
+    background: rgba(255, 255, 255, 0.82);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 26px;
+    padding: 34px;
+    backdrop-filter: blur(12px);
+    box-shadow:
+        0 18px 45px rgba(0, 0, 0, 0.08),
+        0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+/* =====================================
+   RESET PASSWORD PAGE
+===================================== */
+
+.reset-password-box {
+    max-width: 620px;
+    margin: 40px auto 0;
+}
+
+.reset-password-box h2,
+.reset-password-box .login-title {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+/* =====================================
+   INPUTS
+===================================== */
+
+.forgot-password-box input,
+.reset-password-box input {
+    width: 100%;
+    padding: 16px 18px;
+    border-radius: 16px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    background: rgba(255, 255, 255, 0.92);
+    font-size: 1rem;
+    transition: 0.25s ease;
+}
+
+.forgot-password-box input:focus,
+.reset-password-box input:focus {
+    outline: none;
+    border-color: #0097B2;
+    box-shadow: 0 0 0 4px rgba(0, 151, 178, 0.12);
+}
+
+/* =====================================
+   BUTTONS
+===================================== */
+
+.forgot-password-box button,
+.reset-password-box button {
+    width: 100%;
+    margin-top: 22px;
+    border: none;
+    border-radius: 18px;
+    padding: 16px 22px;
+    background: linear-gradient(135deg,
+            #0097B2,
+            #00b7d4);
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.28s ease;
+    box-shadow:
+        0 12px 28px rgba(0, 151, 178, 0.25);
+}
+
+.forgot-password-box button:hover,
+.reset-password-box button:hover {
+    transform: translateY(-2px);
+    box-shadow:
+        0 18px 36px rgba(0, 151, 178, 0.32);
+}
+
+/* =====================================
+   ERROR / SUCCESS
+===================================== */
+
+.login-error,
+.login-message {
+    max-width: 620px;
+    margin: 0 auto 24px;
+    padding: 18px 22px;
+    border-radius: 18px;
+    text-align: center;
+    font-size: 0.98rem;
+    line-height: 1.5;
+}
+
+.login-error {
+    background: rgba(255, 80, 80, 0.08);
+    color: #a93232;
+    border: 1px solid rgba(255, 80, 80, 0.14);
+}
+
+.login-message {
+    background: rgba(0, 151, 178, 0.08);
+    color: #00697c;
+    border: 1px solid rgba(0, 151, 178, 0.14);
+}
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media (max-width: 768px) {
+
+    .forgot-password-box,
+    .reset-password-box {
+        padding: 24px;
+        border-radius: 22px;
+    }
+
+    .forgot-password-box button,
+    .reset-password-box button {
+        padding: 15px 18px;
+    }
+}
+
+/* =====================================================
+   RESET PAGE PASSWORD TOGGLE FIX
+===================================================== */
+
+.reset-password-box .password-field {
+    position: relative !important;
+}
+
+.reset-password-box .password-field input {
+    padding-right: 60px !important;
+}
+
+.reset-password-box .password-toggle {
+    all: unset !important;
+
+    position: absolute !important;
+    right: 16px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    width: 32px !important;
+    height: 32px !important;
+
+    font-size: 22px !important;
+    line-height: 1 !important;
+
+    color: #214b4f !important;
+    opacity: 0.85 !important;
+
+    cursor: pointer !important;
+    z-index: 999 !important;
+}
+
+/* =====================================================
+   REGISTER PASSWORD ICON – HARD FIX
+===================================================== */
+
+body.page-id-32 .password-field {
+    position: relative !important;
+}
+
+body.page-id-32 .password-field input {
+    margin-bottom: 0 !important;
+    padding-right: 60px !important;
+}
+
+body.page-id-32 .password-field .password-toggle {
+    position: absolute !important;
+
+    top: 50% !important;
+    right: 16px !important;
+
+    transform: translateY(-50%) !important;
+
+    width: 32px !important;
+    height: 32px !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    padding: 0 !important;
+    margin: 0 !important;
+
+    line-height: 1 !important;
+    font-size: 20px !important;
+
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+
+    z-index: 999 !important;
+}
+
+/* =====================================================
+   PASSWORD ICON – ABSOLUTE NO-MOVE FIX
+===================================================== */
+
+body.page-id-32 .password-field .password-toggle,
+body.page-id-32 .password-field .password-toggle:hover,
+body.page-id-32 .password-field .password-toggle:focus,
+body.page-id-32 .password-field .password-toggle:active {
+
+    position: absolute !important;
+
+    top: 50% !important;
+    right: 16px !important;
+
+    transform: translate3d(0, -50%, 0) !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    width: 32px !important;
+    height: 32px !important;
+
+    padding: 0 !important;
+    margin: 0 !important;
+
+    line-height: 32px !important;
+    font-size: 20px !important;
+    font-weight: normal !important;
+
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+
+    vertical-align: middle !important;
+
+    -webkit-font-smoothing: antialiased;
+    backface-visibility: hidden;
+
+    cursor: pointer !important;
+    z-index: 999 !important;
+}
+
+/* =====================================================
+   GOOGLE LOGIN – PREMIUM STYLE
+===================================================== */
+
+body.page-id-32 .login-social {
+    margin-top: 24px;
+    display: flex;
+    justify-content: center;
+}
+
+body.page-id-32 .login-social .nsl-container {
+    width: 100%;
+}
+
+body.page-id-32 .login-social .nsl-container-buttons {
+    width: 100%;
+}
+
+body.page-id-32 .login-social .nsl-button {
+    width: 100% !important;
+    border-radius: 999px !important;
+
+    background: #ffffff !important;
+    border: 2px solid #f1e4e4 !important;
+
+    padding: 14px 18px !important;
+
+    transition: all 0.3s ease !important;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04) !important;
+}
+
+body.page-id-32 .login-social .nsl-button:hover {
+    transform: translateY(-2px) !important;
+
+    border-color: #7bc47f !important;
+
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08) !important;
+}
+
+body.page-id-32 .login-social .nsl-button-default div {
+    justify-content: center !important;
+}
+
+body.page-id-32 .login-social .nsl-button svg {
+    width: 20px !important;
+    height: 20px !important;
+}
+
+body.page-id-32 .login-social .nsl-button span {
+    font-family: "Adys", sans-serif !important;
+    font-size: 15px !important;
+    color: #214b4f !important;
+    font-weight: 600 !important;
+}
+
+body.page-id-32 .login-social .nsl-button-google[data-skin="light"] {
+    background: #ffffff !important;
+}
+
+/* =====================================================
+   GOOGLE BUTTON – MOBILE FIXED
+===================================================== */
+
+@media (max-width: 768px) {
+
+    body.page-id-32 .register-card .login-social {
+        width: 100% !important;
+    }
+
+    body.page-id-32 .register-card .login-social .nsl-container,
+    body.page-id-32 .register-card .login-social .nsl-container-buttons {
+        width: 100% !important;
+    }
+
+    body.page-id-32 .register-card .login-social .nsl-button {
+
+        width: calc(100% + 60px) !important;
+        max-width: calc(100% + 60px) !important;
+
+        margin-left: -30px !important;
+
+        padding: 7px 7px !important;
+
+        border-radius: 999px !important;
+
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    body.page-id-32 .register-card .login-social .nsl-button-default div {
+
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 5px !important;
+
+        width: auto !important;
+    }
+}
+
+/* Hide auto injected Google button under login */
+body.page-id-32 .login-card .nsl-container {
+    display: none !important;
+}
+
+/* Re-show shortcode one in register */
+body.page-id-32 .register-card .nsl-container {
+    display: block !important;
+}

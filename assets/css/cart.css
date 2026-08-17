@@ -1,0 +1,1194 @@
+/* =====================================================
+   CART PAGE WRAPPER
+===================================================== */
+
+body.woocommerce-cart {
+    background: linear-gradient(180deg, #f7eded 0%, #ffffff 100%);
+    font-family: "Adys", sans-serif;
+}
+
+body.woocommerce-cart .site-content {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 40px;
+}
+
+/* =====================================================
+   MAIN CART CONTAINER
+===================================================== */
+
+.wp-block-woocommerce-cart {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 24px;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.06);
+}
+
+/* =====================================================
+   CART TABLE
+===================================================== */
+
+.wc-block-cart-items {
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.wc-block-cart-item {
+    padding: 20px 0;
+    border-bottom: 1px solid #f1e4e4;
+}
+
+.wc-block-cart-item:last-child {
+    border-bottom: none;
+}
+
+/* Product Image */
+.wc-block-cart-item__image img {
+    border-radius: 12px;
+    width: 70px;
+}
+
+/* Product Name */
+.wc-block-cart-item__product a {
+    color: #444;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.wc-block-cart-item__product a:hover {
+    color: #7bc47f;
+}
+
+/* Price */
+.wc-block-formatted-money-amount {
+    font-weight: 600;
+    color: #444;
+}
+
+/* Quantity Input */
+.wc-block-components-quantity-selector input {
+    border-radius: 10px;
+    border: 2px solid #214b4f;
+    text-align: center;
+    font-weight: 600;
+    width: 60px;
+}
+
+/* Remove Button */
+.wc-block-cart-item__remove-link {
+    color: #e28b8b !important;
+    font-size: 18px;
+}
+
+.wc-block-cart-item__remove-link:hover {
+    color: #d66a6a !important;
+}
+
+/* =====================================================
+   CART TOTALS PANEL
+===================================================== */
+
+.wp-block-woocommerce-cart-totals-block {
+    background: #fff7e6;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.05);
+}
+
+.wp-block-woocommerce-cart-totals-block h2 {
+    font-size: 22px;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+/* Totals Text */
+.wp-block-woocommerce-cart-totals-block,
+.wp-block-woocommerce-cart-totals-block table {
+    font-size: 16px;
+    color: #444;
+}
+
+/* =====================================================
+   CHECKOUT BUTTON
+===================================================== */
+
+.wc-block-cart__submit-button,
+.wc-block-components-button {
+    background: #7bc47f !important;
+    color: #454545 !important;
+    border-radius: 999px !important;
+    padding: 14px 24px !important;
+    font-size: 18px !important;
+    font-weight: 700 !important;
+    border: none !important;
+    transition: all 0.3s ease !important;
+}
+
+.wc-block-cart__submit-button:hover,
+.wc-block-components-button:hover {
+    background: #96d89b !important;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(150, 216, 155, 0.35);
+}
+
+/* =====================================================
+   COUPON FIELD
+===================================================== */
+
+.wc-block-components-totals-coupon__form input {
+    border-radius: 10px;
+    border: 2px solid #214b4f;
+    padding: 10px;
+}
+
+.wc-block-components-totals-coupon__button {
+    background: #214b4f !important;
+    color: #ffffff !important;
+    border-radius: 999px !important;
+}
+
+/* =====================================================
+   EMPTY CART
+===================================================== */
+
+.wp-block-woocommerce-empty-cart-block {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.wp-block-woocommerce-empty-cart-block h2 {
+    font-size: 28px;
+    color: #444;
+}
+
+.wp-block-woocommerce-empty-cart-block p {
+    color: #666;
+}
+
+.wp-block-woocommerce-empty-cart-block .wc-block-components-button {
+    background: #7bc47f !important;
+    color: #454545 !important;
+    border-radius: 999px;
+    padding: 14px 24px;
+}
+
+/* =====================================================
+   RESPONSIVE DESIGN
+===================================================== */
+
+@media (max-width: 768px) {
+    .wp-block-woocommerce-cart {
+        padding: 20px;
+    }
+
+    .wc-block-cart-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .wp-block-woocommerce-cart-totals-block {
+        margin-top: 20px;
+    }
+}
+
+/* Center the cart layout */
+.wp-block-woocommerce-cart {
+    max-width: 1200px;
+    margin: 60px auto;
+}
+
+/* Improve spacing between items */
+.wc-block-cart-item {
+    padding: 20px 0;
+    border-bottom: 1px solid #f1e4e4;
+}
+
+/* Style the totals card */
+.wp-block-woocommerce-cart-totals-block {
+    background: #fff7e6;
+    border-radius: 20px;
+    padding: 30px;
+}
+
+/* Improve typography */
+.wc-block-components-totals-item__label {
+    font-weight: 600;
+    color: #444;
+}
+
+.wc-block-components-totals-item__value {
+    font-weight: 700;
+    color: #214b4f;
+}
+
+/* Checkout button */
+.wc-block-cart__submit-button {
+    background: #7bc47f !important;
+    color: #454545 !important;
+    border-radius: 999px !important;
+    font-size: 18px !important;
+    font-weight: 700 !important;
+    padding: 14px !important;
+    transition: all 0.3s ease !important;
+}
+
+.wc-block-cart__submit-button:hover {
+    background: #96d89b !important;
+    transform: translateY(-2px);
+}
+
+/* =====================================================
+   CART TYPOGRAPHY — HARD OVERRIDE (FINAL)
+===================================================== */
+
+/* page title */
+body.woocommerce-cart .wp-block-woocommerce-cart h1 {
+    font-size: 48px !important;
+    line-height: 1.1 !important;
+    font-weight: 700 !important;
+    color: #3f3434 !important;
+    margin-bottom: 34px !important;
+}
+
+/* top headers */
+body.woocommerce-cart .wc-block-cart-items__header,
+body.woocommerce-cart .wp-block-woocommerce-cart-totals-block h2,
+body.woocommerce-cart .wc-block-components-totals-wrapper h2,
+body.woocommerce-cart .wc-block-components-title {
+    font-size: 24px !important;
+    line-height: 1.2 !important;
+    font-weight: 700 !important;
+    color: #3f3434 !important;
+}
+
+/* product titles */
+body.woocommerce-cart .wc-block-components-product-name,
+body.woocommerce-cart .wc-block-components-product-name a,
+body.woocommerce-cart .wc-block-cart-item__product a {
+    font-size: 22px !important;
+    line-height: 1.35 !important;
+    font-weight: 700 !important;
+    color: #214b4f !important;
+    text-decoration: none !important;
+}
+
+/* =====================================================
+   PRODUCT DESCRIPTIONS — STRONGER FIX
+===================================================== */
+
+body.woocommerce-cart .wc-block-cart-item__description,
+body.woocommerce-cart .wc-block-cart-item__description *,
+body.woocommerce-cart .wc-block-components-product-details,
+body.woocommerce-cart .wc-block-components-product-details *,
+body.woocommerce-cart .wc-block-components-product-metadata,
+body.woocommerce-cart .wc-block-components-product-metadata *,
+body.woocommerce-cart .wc-block-components-product-details__description,
+body.woocommerce-cart .wc-block-components-product-details__description *,
+body.woocommerce-cart .wc-block-components-product-details p,
+body.woocommerce-cart .wc-block-components-product-details span,
+body.woocommerce-cart .wc-block-components-product-details div {
+    font-size: 18px !important;
+    line-height: 1.75 !important;
+    color: #6a6262 !important;
+    font-weight: 400 !important;
+}
+
+/* spacing under title */
+body.woocommerce-cart .wc-block-components-product-details,
+body.woocommerce-cart .wc-block-components-product-metadata,
+body.woocommerce-cart .wc-block-cart-item__description {
+    margin-top: 6px !important;
+}
+
+/* prices */
+body.woocommerce-cart .wc-block-formatted-money-amount,
+body.woocommerce-cart .wc-block-components-product-price,
+body.woocommerce-cart .wc-block-components-totals-item__value {
+    font-size: 20px !important;
+    line-height: 1.3 !important;
+    font-weight: 700 !important;
+}
+
+/* totals labels */
+body.woocommerce-cart .wc-block-components-totals-item__label {
+    font-size: 18px !important;
+    line-height: 1.4 !important;
+    font-weight: 600 !important;
+    color: #444 !important;
+}
+
+/* grand total */
+body.woocommerce-cart .wc-block-components-totals-footer-item .wc-block-components-totals-item__label,
+body.woocommerce-cart .wc-block-components-totals-footer-item .wc-block-components-totals-item__value {
+    font-size: 22px !important;
+    font-weight: 700 !important;
+}
+
+/* quantity */
+body.woocommerce-cart .wc-block-components-quantity-selector input {
+    font-size: 17px !important;
+    font-weight: 700 !important;
+}
+
+/* coupon field */
+body.woocommerce-cart .wc-block-components-totals-coupon__form input {
+    font-size: 16px !important;
+}
+
+/* checkout button */
+body.woocommerce-cart .wc-block-cart__submit-button,
+body.woocommerce-cart .wc-block-components-button {
+    font-size: 20px !important;
+    font-weight: 700 !important;
+    line-height: 1.2 !important;
+}
+
+/* empty cart */
+body.woocommerce-cart .wp-block-woocommerce-empty-cart-block h2 {
+    font-size: 32px !important;
+    font-weight: 700 !important;
+}
+
+body.woocommerce-cart .wp-block-woocommerce-empty-cart-block p {
+    font-size: 18px !important;
+    line-height: 1.7 !important;
+}
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 768px) {
+    body.woocommerce-cart .wp-block-woocommerce-cart h1 {
+        font-size: 34px !important;
+    }
+
+    body.woocommerce-cart .wc-block-components-product-name,
+    body.woocommerce-cart .wc-block-components-product-name a,
+    body.woocommerce-cart .wc-block-cart-item__product a {
+        font-size: 18px !important;
+    }
+
+    body.woocommerce-cart .wc-block-cart-item__description,
+    body.woocommerce-cart .wc-block-cart-item__description *,
+    body.woocommerce-cart .wc-block-components-product-details,
+    body.woocommerce-cart .wc-block-components-product-details *,
+    body.woocommerce-cart .wc-block-components-product-metadata,
+    body.woocommerce-cart .wc-block-components-product-metadata *,
+    body.woocommerce-cart .wc-block-components-product-details__description,
+    body.woocommerce-cart .wc-block-components-product-details__description *,
+    body.woocommerce-cart .wc-block-components-product-details p,
+    body.woocommerce-cart .wc-block-components-product-details span,
+    body.woocommerce-cart .wc-block-components-product-details div {
+        font-size: 16px !important;
+        line-height: 1.7 !important;
+    }
+
+    body.woocommerce-cart .wc-block-formatted-money-amount,
+    body.woocommerce-cart .wc-block-components-product-price,
+    body.woocommerce-cart .wc-block-components-totals-item__value {
+        font-size: 17px !important;
+    }
+
+    body.woocommerce-cart .wc-block-components-totals-item__label {
+        font-size: 16px !important;
+    }
+
+    body.woocommerce-cart .wc-block-cart__submit-button,
+    body.woocommerce-cart .wc-block-components-button {
+        font-size: 18px !important;
+    }
+}
+
+
+/* =====================================================
+   CART PRICE ALIGNMENT – DESKTOP
+   Keeps all prices visible and properly aligned
+===================================================== */
+
+/* Align price beneath product title */
+body.woocommerce-cart .wc-block-components-product-details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+}
+
+/* Style product prices under titles */
+body.woocommerce-cart .wc-block-components-product-price,
+body.woocommerce-cart .wc-block-components-product-price__value,
+body.woocommerce-cart .wc-block-formatted-money-amount {
+    display: inline-block !important;
+    font-size: 22px;
+    font-weight: 700;
+    color: #214b4f;
+}
+
+/* Align totals column (right side) */
+body.woocommerce-cart .wc-block-cart-item__total {
+    text-align: right;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* Prevent layout shifts */
+body.woocommerce-cart .wc-block-cart-item {
+    align-items: center;
+}
+
+/* =====================================================
+   MOBILE CART – FINAL PRICE & LAYOUT FIX
+   Removes duplicate prices while preserving correct ones
+===================================================== */
+
+@media (max-width: 768px) {
+
+    /* Ensure cart container fits perfectly */
+    body.woocommerce-cart .site-content,
+    body.woocommerce-cart .wp-block-woocommerce-cart {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 auto !important;
+        padding: 18px !important;
+        box-sizing: border-box !important;
+        overflow-x: hidden !important;
+    }
+
+    /* Convert each cart item into a clean grid */
+    body.woocommerce-cart .wc-block-cart-item {
+        display: grid !important;
+        grid-template-columns: 70px 1fr;
+        column-gap: 14px;
+        row-gap: 6px;
+        align-items: start;
+        padding: 16px 0;
+        width: 100%;
+    }
+
+    /* Product image */
+    body.woocommerce-cart .wc-block-cart-item__image {
+        grid-column: 1;
+        grid-row: 1 / span 3;
+        width: 70px;
+        min-width: 70px;
+        margin: 0;
+    }
+
+    body.woocommerce-cart .wc-block-cart-item__image img {
+        width: 70px;
+        border-radius: 12px;
+    }
+
+    /* Product details */
+    body.woocommerce-cart .wc-block-components-product-details,
+    body.woocommerce-cart .wc-block-cart-item__product {
+        grid-column: 2;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Product title */
+    body.woocommerce-cart .wc-block-components-product-name,
+    body.woocommerce-cart .wc-block-components-product-name a,
+    body.woocommerce-cart .wc-block-cart-item__product a {
+        font-size: 17px !important;
+        font-weight: 700;
+        line-height: 1.35;
+        margin-bottom: 2px;
+        color: #214b4f;
+    }
+
+    /* Product description */
+    body.woocommerce-cart .wc-block-cart-item__description,
+    body.woocommerce-cart .wc-block-components-product-details,
+    body.woocommerce-cart .wc-block-components-product-metadata {
+        font-size: 14px !important;
+        line-height: 1.6;
+        color: #6a6262;
+    }
+
+    /* Keep only the correct price under the title */
+    body.woocommerce-cart .wc-block-components-product-price,
+    body.woocommerce-cart .wc-block-components-product-price__value,
+    body.woocommerce-cart .wc-block-formatted-money-amount {
+        display: inline-block !important;
+        font-size: 16px !important;
+        font-weight: 700 !important;
+        color: #214b4f !important;
+    }
+
+    /* Hide duplicated right-side price on mobile */
+    body.woocommerce-cart .wc-block-cart-item__total,
+    body.woocommerce-cart .wc-block-cart-item__total-price-and-sale-badge-wrapper {
+        display: none !important;
+    }
+
+    /* Quantity selector */
+    body.woocommerce-cart .wc-block-components-quantity-selector {
+        grid-column: 2;
+        margin-top: 6px;
+    }
+
+    body.woocommerce-cart .wc-block-components-quantity-selector input {
+        width: 52px;
+        font-size: 15px;
+    }
+
+    /* Remove link */
+    body.woocommerce-cart .wc-block-cart-item__remove-link {
+        grid-column: 2;
+        margin-top: 4px;
+        display: inline-block;
+    }
+
+    /* Totals card */
+    body.woocommerce-cart .wp-block-woocommerce-cart-totals-block {
+        width: 100%;
+        margin-top: 20px;
+        padding: 20px;
+        border-radius: 16px;
+    }
+
+    body.woocommerce-cart .wc-block-components-totals-item__label,
+    body.woocommerce-cart .wc-block-components-totals-item__value {
+        font-size: 15px;
+    }
+
+    body.woocommerce-cart .wc-block-components-totals-footer-item .wc-block-components-totals-item__label,
+    body.woocommerce-cart .wc-block-components-totals-footer-item .wc-block-components-totals-item__value {
+        font-size: 17px;
+        font-weight: 700;
+    }
+
+    /* Checkout button */
+    body.woocommerce-cart .wc-block-cart__submit-button,
+    body.woocommerce-cart .wc-block-components-button {
+        font-size: 16px !important;
+        min-height: 48px;
+    }
+}
+
+/* =====================================================
+   CART PRICE COLOR STYLING
+   Matches product page pricing colors
+===================================================== */
+
+/* Default product prices (including non-sale prices below titles) */
+body.woocommerce-cart .wc-block-components-product-price,
+body.woocommerce-cart .wc-block-components-product-price__value,
+body.woocommerce-cart .wc-block-formatted-money-amount {
+    color: #7bc47f !important;
+    /* Soft green */
+    font-weight: 700 !important;
+    font-size: 22px !important;
+}
+
+/* Ensure currency symbol inherits the correct color */
+body.woocommerce-cart .woocommerce-Price-currencySymbol {
+    color: inherit !important;
+}
+
+/* Sale (discounted) price */
+body.woocommerce-cart ins,
+body.woocommerce-cart ins .wc-block-formatted-money-amount,
+body.woocommerce-cart .wc-block-components-product-price ins,
+body.woocommerce-cart .wc-block-components-product-price ins .wc-block-formatted-money-amount {
+    color: #7bc47f !important;
+    /* Soft green */
+    font-weight: 700 !important;
+    text-decoration: none !important;
+}
+
+/* Regular (old) price before discount */
+body.woocommerce-cart del,
+body.woocommerce-cart del .wc-block-formatted-money-amount,
+body.woocommerce-cart .wc-block-components-product-price del,
+body.woocommerce-cart .wc-block-components-product-price del .wc-block-formatted-money-amount {
+    color: #e28b8b !important;
+    /* Soft red */
+    opacity: 0.9;
+    font-weight: 500 !important;
+    text-decoration: line-through !important;
+    text-decoration-thickness: 1.5px;
+}
+
+/* Totals section prices */
+body.woocommerce-cart .wc-block-components-totals-item__value {
+    color: #214b4f !important;
+    /* Brand teal */
+    font-weight: 700 !important;
+}
+
+/* Highlight the grand total */
+body.woocommerce-cart .wc-block-components-totals-footer-item .wc-block-components-totals-item__value {
+    color: #7bc47f !important;
+    font-size: 22px !important;
+    font-weight: 700 !important;
+}
+
+/* Optional: emphasize the grand total label */
+body.woocommerce-cart .wc-block-components-totals-footer-item .wc-block-components-totals-item__label {
+    font-weight: 700 !important;
+}
+
+/* =====================================================
+   MOBILE OPTIMIZATION
+===================================================== */
+@media (max-width: 768px) {
+
+    /* Product prices */
+    body.woocommerce-cart .wc-block-components-product-price,
+    body.woocommerce-cart .wc-block-components-product-price__value,
+    body.woocommerce-cart .wc-block-formatted-money-amount {
+        font-size: 22px !important;
+    }
+
+    /* Old (strikethrough) prices */
+    body.woocommerce-cart del .wc-block-formatted-money-amount {
+        font-size: 14px !important;
+    }
+
+    /* Totals */
+    body.woocommerce-cart .wc-block-components-totals-item__value {
+        font-size: 16px !important;
+    }
+
+    /* Grand total */
+    body.woocommerce-cart .wc-block-components-totals-footer-item .wc-block-components-totals-item__value {
+        font-size: 18px !important;
+    }
+}
+
+/* =====================================================
+   EMPTY CART – PREMIUM DESIGN
+===================================================== */
+
+/* Main Empty Cart Container */
+body.woocommerce-cart .wp-block-woocommerce-empty-cart-block {
+    background: linear-gradient(135deg, #ffffff, #fdf6f6);
+    border-radius: 28px;
+    padding: 70px 40px;
+    margin: 40px auto;
+    text-align: center;
+    max-width: 900px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.05);
+    position: relative;
+}
+
+/* Empty Cart Icon */
+body.woocommerce-cart .wc-block-cart__empty-cart__icon {
+    width: 90px;
+    height: 90px;
+    margin-bottom: 20px;
+    opacity: 0.85;
+    color: #214b4f;
+}
+
+/* Main Title */
+body.woocommerce-cart .wc-block-cart__empty-cart__title,
+body.woocommerce-cart .wp-block-woocommerce-empty-cart-block h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #3f3434;
+    margin-bottom: 10px;
+}
+
+/* Subtitle / Description */
+body.woocommerce-cart .wp-block-woocommerce-empty-cart-block p {
+    font-size: 18px;
+    color: #6a6262;
+    margin-bottom: 30px;
+}
+
+/* Decorative Divider */
+body.woocommerce-cart .wp-block-woocommerce-empty-cart-block::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(to right, #7bc47f, #214b4f);
+    margin: 20px auto 30px;
+    border-radius: 2px;
+}
+
+/* "New in Store" Section */
+body.woocommerce-cart .wp-block-woocommerce-empty-cart-block h3 {
+    font-size: 22px;
+    color: #214b4f;
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+
+/* Product Grid Alignment */
+body.woocommerce-cart .wc-block-grid {
+    margin-top: 20px;
+}
+
+/* Buttons */
+body.woocommerce-cart .wc-block-components-button {
+    background: linear-gradient(135deg, #7bc47f, #96d89b) !important;
+    color: #ffffff !important;
+    border-radius: 999px !important;
+    padding: 14px 28px !important;
+    font-size: 18px !important;
+    font-weight: 700 !important;
+    border: none !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 8px 20px rgba(123, 196, 127, 0.3);
+}
+
+body.woocommerce-cart .wc-block-components-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(123, 196, 127, 0.4);
+    background: linear-gradient(135deg, #6bb36f, #8fd493) !important;
+}
+
+/* =====================================================
+   MOBILE OPTIMIZATION
+===================================================== */
+@media (max-width: 768px) {
+    body.woocommerce-cart .wp-block-woocommerce-empty-cart-block {
+        padding: 50px 20px;
+        border-radius: 20px;
+    }
+
+    body.woocommerce-cart .wc-block-cart__empty-cart__icon {
+        width: 70px;
+        height: 70px;
+    }
+
+    body.woocommerce-cart .wc-block-cart__empty-cart__title,
+    body.woocommerce-cart .wp-block-woocommerce-empty-cart-block h2 {
+        font-size: 24px;
+    }
+
+    body.woocommerce-cart .wp-block-woocommerce-empty-cart-block p {
+        font-size: 16px;
+    }
+
+    body.woocommerce-cart .wp-block-woocommerce-empty-cart-block h3 {
+        font-size: 18px;
+    }
+
+    body.woocommerce-cart .wc-block-components-button {
+        font-size: 16px !important;
+        padding: 12px 22px !important;
+    }
+}
+
+/* =====================================================
+   EMPTY CART – PRODUCT GRID (MATCHES CHECKOUT STYLE)
+===================================================== */
+
+/* Product Grid Container */
+body.woocommerce-cart .wc-block-grid {
+    margin-top: 30px;
+}
+
+/* Individual Product Cards */
+body.woocommerce-cart .wc-block-grid__product {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 18px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+/* Hover Effect */
+body.woocommerce-cart .wc-block-grid__product:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.08);
+}
+
+/* Product Images */
+body.woocommerce-cart .wc-block-grid__product-image img {
+    border-radius: 14px;
+    margin-bottom: 12px;
+}
+
+/* Product Titles */
+body.woocommerce-cart .wc-block-grid__product-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #214b4f;
+    margin-bottom: 6px;
+    line-height: 1.4;
+}
+
+/* Prices */
+body.woocommerce-cart .wc-block-grid__product-price {
+    font-size: 16px;
+    font-weight: 700;
+    color: #7bc47f;
+    margin-bottom: 12px;
+}
+
+/* Old Price (Sale) */
+body.woocommerce-cart .wc-block-grid__product-price del {
+    color: #e28b8b;
+    opacity: 0.8;
+    margin-right: 6px;
+}
+
+/* Sale Price */
+body.woocommerce-cart .wc-block-grid__product-price ins {
+    color: #7bc47f;
+    text-decoration: none;
+}
+
+/* Buttons */
+body.woocommerce-cart .wc-block-grid__product-add-to-cart .button,
+body.woocommerce-cart .wc-block-grid__product-add-to-cart .wp-block-button__link {
+    background: linear-gradient(135deg, #7bc47f, #96d89b);
+    color: #ffffff !important;
+    border-radius: 999px;
+    padding: 10px 18px;
+    font-size: 14px;
+    font-weight: 700;
+    border: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 14px rgba(123, 196, 127, 0.25);
+}
+
+/* Button Hover */
+body.woocommerce-cart .wc-block-grid__product-add-to-cart .button:hover,
+body.woocommerce-cart .wc-block-grid__product-add-to-cart .wp-block-button__link:hover {
+    background: linear-gradient(135deg, #6bb36f, #8fd493);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 18px rgba(123, 196, 127, 0.35);
+}
+
+/* Section Title */
+body.woocommerce-cart .wp-block-woocommerce-empty-cart-block h3 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #214b4f;
+    margin-bottom: 20px;
+}
+
+/* =====================================================
+   MOBILE OPTIMIZATION
+===================================================== */
+@media (max-width: 768px) {
+
+    body.woocommerce-cart .wc-block-grid__products {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
+    body.woocommerce-cart .wc-block-grid__product {
+        padding: 14px;
+        border-radius: 16px;
+    }
+
+    body.woocommerce-cart .wc-block-grid__product-title {
+        font-size: 14px;
+    }
+
+    body.woocommerce-cart .wc-block-grid__product-price {
+        font-size: 14px;
+    }
+
+    body.woocommerce-cart .wc-block-grid__product-add-to-cart .button,
+    body.woocommerce-cart .wc-block-grid__product-add-to-cart .wp-block-button__link {
+        font-size: 13px;
+        padding: 8px 14px;
+    }
+}
+
+/* =====================================================
+   EMPTY CART – PRODUCT TYPOGRAPHY ENHANCEMENT
+   Enlarges fonts for better readability and elegance
+===================================================== */
+
+/* Section Title (e.g., "Продукти") */
+body.woocommerce-cart .wp-block-woocommerce-empty-cart-block h2,
+body.woocommerce-cart .wp-block-woocommerce-empty-cart-block h3 {
+    font-size: 30px;
+    font-weight: 700;
+    color: #214b4f;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+/* Product Titles */
+body.woocommerce-cart .wc-block-grid__product-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #214b4f;
+    line-height: 1.4;
+    margin-bottom: 8px;
+}
+
+/* Product Prices */
+body.woocommerce-cart .wc-block-grid__product-price,
+body.woocommerce-cart .wc-block-grid__product-price .wc-block-formatted-money-amount {
+    font-size: 18px;
+    font-weight: 700;
+    color: #7bc47f;
+    margin-bottom: 12px;
+}
+
+/* Old Price (Sale) */
+body.woocommerce-cart .wc-block-grid__product-price del {
+    font-size: 16px;
+    color: #e28b8b;
+    opacity: 0.85;
+    margin-right: 6px;
+}
+
+/* Sale Price */
+body.woocommerce-cart .wc-block-grid__product-price ins {
+    font-size: 18px;
+    color: #7bc47f;
+    text-decoration: none;
+}
+
+/* Add to Cart Buttons */
+body.woocommerce-cart .wc-block-grid__product-add-to-cart .button,
+body.woocommerce-cart .wc-block-grid__product-add-to-cart .wp-block-button__link {
+    font-size: 16px;
+    font-weight: 700;
+    padding: 12px 22px;
+    border-radius: 999px;
+}
+
+/* =====================================================
+   EMPTY CART MESSAGE
+===================================================== */
+
+body.woocommerce-cart .wp-block-woocommerce-empty-cart-block p {
+    font-size: 20px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+/* =====================================================
+   MOBILE OPTIMIZATION
+===================================================== */
+
+@media (max-width: 768px) {
+
+    /* Section Title */
+    body.woocommerce-cart .wp-block-woocommerce-empty-cart-block h2,
+    body.woocommerce-cart .wp-block-woocommerce-empty-cart-block h3 {
+        font-size: 24px;
+    }
+
+    /* Product Titles */
+    body.woocommerce-cart .wc-block-grid__product-title {
+        font-size: 16px;
+    }
+
+    /* Prices */
+    body.woocommerce-cart .wc-block-grid__product-price,
+    body.woocommerce-cart .wc-block-grid__product-price .wc-block-formatted-money-amount {
+        font-size: 15px;
+    }
+
+    body.woocommerce-cart .wc-block-grid__product-price del {
+        font-size: 13px;
+    }
+
+    /* Buttons */
+    body.woocommerce-cart .wc-block-grid__product-add-to-cart .button,
+    body.woocommerce-cart .wc-block-grid__product-add-to-cart .wp-block-button__link {
+        font-size: 14px;
+        padding: 10px 16px;
+    }
+
+    /* Empty Cart Message */
+    body.woocommerce-cart .wp-block-woocommerce-empty-cart-block p {
+        font-size: 18px;
+    }
+}
+
+/* =====================================================
+   EMPTY CART – ALIGN PRODUCT BUTTONS
+   Ensures all "Add to Cart" buttons are level
+===================================================== */
+
+/* Make each product card a flexible container */
+body.woocommerce-cart .wc-block-grid__product {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+/* Ensure consistent spacing within the product content */
+body.woocommerce-cart .wc-block-grid__product>* {
+    width: 100%;
+}
+
+/* Allow content to expand naturally */
+body.woocommerce-cart .wc-block-grid__product-title {
+    min-height: 48px;
+    /* Adjust if needed for longer titles */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Keep price aligned consistently */
+body.woocommerce-cart .wc-block-grid__product-price {
+    min-height: 24px;
+}
+
+/* Push the button to the bottom */
+body.woocommerce-cart .wc-block-grid__product-add-to-cart {
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+}
+
+/* Ensure buttons have consistent width */
+body.woocommerce-cart .wc-block-grid__product-add-to-cart .button,
+body.woocommerce-cart .wc-block-grid__product-add-to-cart .wp-block-button__link {
+    width: 100%;
+    max-width: 180px;
+    text-align: center;
+}
+
+/* =====================================================
+   MOBILE OPTIMIZATION
+===================================================== */
+@media (max-width: 768px) {
+
+    body.woocommerce-cart .wc-block-grid__product-title {
+        min-height: 44px;
+        font-size: 15px;
+    }
+
+    body.woocommerce-cart .wc-block-grid__product-add-to-cart .button,
+    body.woocommerce-cart .wc-block-grid__product-add-to-cart .wp-block-button__link {
+        max-width: 100%;
+        font-size: 14px;
+        padding: 10px 16px;
+    }
+}
+
+/* =====================================================
+   LOGO FIX — MOBILE
+===================================================== */
+
+@media (max-width: 640px) {
+
+    .site-header img,
+    .custom-logo,
+    .logo img {
+
+        max-height: 60px !important;
+        width: auto !important;
+        height: auto !important;
+
+        object-fit: contain;
+    }
+}
+
+/* =====================================================
+   CART PAGE – RELEASE HEADER FROM PAGE WRAPPER
+===================================================== */
+
+/* Let the outer page wrapper be full width on cart only */
+body.woocommerce-cart #page,
+body.woocommerce-cart .site,
+body.woocommerce-cart .site-wrapper,
+body.woocommerce-cart .page-wrapper,
+body.woocommerce-cart .content-area {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+/* Keep only the cart content itself nicely contained */
+body.woocommerce-cart .site-content {
+    max-width: 1200px !important;
+
+    margin-top: 60px !important;
+    margin-bottom: 0 !important;
+
+    margin-left: auto !important;
+    margin-right: auto !important;
+
+    padding: 40px !important;
+}
+
+/* Make sure header uses the viewport, not the wrapper */
+body.woocommerce-cart .site-header {
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    transform: none !important;
+}
+
+/* =====================================================
+   EUR TO BGN
+===================================================== */
+
+.bgn-price-added,
+.bgn-price-checkout {
+
+    display: block;
+
+    margin-top: 4px;
+
+    font-size: 13px;
+
+    line-height: 1.4;
+
+    color: #8b7d7d;
+
+    opacity: 0.9;
+
+    font-weight: 500;
+
+}
+
+/* =====================================================
+   FOOTER — FULL WIDTH FIX
+===================================================== */
+
+body.woocommerce-cart footer,
+body.woocommerce-cart .site-footer {
+
+    width: 100vw !important;
+    max-width: 100vw !important;
+
+    margin-left: 50% !important;
+    transform: translateX(-50%) !important;
+
+    left: 0 !important;
+    right: 0 !important;
+
+}
+
+/* =====================================================
+   FINAL FOOTER GAP FIX
+===================================================== */
+
+body.woocommerce-cart footer,
+body.woocommerce-cart .site-footer {
+
+    margin-bottom: -80px !important;
+
+}
+
+@media (max-width: 768px) {
+
+    body.woocommerce-cart footer,
+    body.woocommerce-cart .site-footer {
+
+        margin-bottom: -80px !important;
+
+    }
+
+}

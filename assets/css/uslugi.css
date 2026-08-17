@@ -1,0 +1,548 @@
+/* =====================================================
+   USLUGI PAGE — FULL CLEAN VERSION
+===================================================== */
+
+/* safety */
+html,
+body {
+    overflow-x: clip;
+}
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.services-hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 140px 20px 120px;
+    text-align: center;
+    background:
+        linear-gradient(rgba(255, 248, 244, 0.10),
+            rgba(255, 248, 244, 0.08)),
+        url('../img/services-hero.jpg') center center / cover no-repeat;
+}
+
+.services-hero-inner {
+    width: 100%;
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    padding: 55px 40px;
+
+    border-radius: 34px;
+
+    background: rgba(255, 255, 255, 0.34);
+
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+
+    border: 1px solid rgba(255, 255, 255, 0.28);
+
+    box-shadow:
+        0 35px 100px rgba(0, 0, 0, 0.22);
+}
+
+.services-title {
+    font-size: clamp(46px, 5vw, 64px);
+    font-weight: 500;
+
+    color: #1a4144;
+
+    margin: 0;
+
+    display: inline-block;
+}
+
+.services-title::after {
+    content: "";
+
+    display: block;
+
+    width: 80px;
+    height: 6px;
+
+    margin: 20px auto 0;
+
+    background:
+        linear-gradient(#1a4144, #1a4144) top center / 60px 2px no-repeat,
+        linear-gradient(#1a4144, #1a4144) bottom center / 30px 2px no-repeat;
+}
+
+.services-subtitle {
+    font-size: 24px;
+    line-height: 1.9;
+
+    color: #1a4144;
+
+    text-shadow:
+        0 1px 2px rgba(255, 255, 255, 0.25);
+
+    max-width: 760px;
+
+    margin: 38px auto 0;
+}
+
+/* =====================================================
+   SERVICES PAGE
+===================================================== */
+
+.services-page {
+    padding: 0;
+    width: 100%;
+}
+
+/* full width rows */
+.services-page .service-row {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    min-height: 760px;
+    height: auto;
+    align-items: stretch;
+}
+
+/* reversed rows */
+.services-page .service-row.reverse {
+    grid-template-columns: 2fr 1fr;
+}
+
+.services-page .service-row.reverse .reveal-clip:first-child {
+    order: 2;
+}
+
+.services-page .service-row.reverse .reveal-clip:last-child {
+    order: 1;
+}
+
+/* row backgrounds */
+.services-page .service-row:nth-of-type(1) {
+    background: #f7e6e6;
+}
+
+.services-page .service-row:nth-of-type(2) {
+    background: #f4dddd;
+}
+
+.services-page .service-row:nth-of-type(3) {
+    background: #efd4d4;
+}
+
+.services-page .service-row:nth-of-type(4) {
+    background: #e9cfcf;
+}
+
+/* wrappers */
+.services-page .reveal-clip {
+    min-width: 0;
+    min-height: 100%;
+    overflow: visible;
+    display: flex;
+}
+
+/* =====================================================
+   IMAGE SIDE
+===================================================== */
+
+.services-page .service-image {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.services-page .service-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* =====================================================
+   CONTENT SIDE
+===================================================== */
+
+.services-page .service-content {
+    width: 100%;
+    min-width: 0;
+    padding: 90px 110px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.services-page .service-row.reverse .service-content {
+    align-items: flex-start;
+    text-align: left;
+}
+
+/* title */
+.services-page .service-title {
+    font-size: 40px;
+    line-height: 1.25;
+    font-weight: 500;
+    color: #214b4f;
+    margin: 0 0 26px;
+}
+
+/* intro */
+.services-page .service-intro {
+    font-size: 23px;
+    line-height: 1.95;
+    color: #444444;
+    margin: 0 0 50px;
+    max-width: 920px;
+}
+
+/* details grid */
+.services-page .service-details {
+    width: 100%;
+    max-width: 980px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(180px, 1fr));
+    gap: 40px;
+    margin-bottom: 46px;
+}
+
+.services-page .service-block h4 {
+    font-size: 19px;
+    font-weight: 600;
+    line-height: 1.4;
+    color: #2f5e62;
+    margin: 0 0 14px;
+}
+
+.services-page .service-block p,
+.services-page .service-block li {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #444444;
+}
+
+.services-page .service-block p {
+    margin: 0;
+}
+
+.services-page .service-block ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+/* buttons */
+.services-page .service-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin-top: 6px;
+    align-items: center;
+}
+
+.services-page .service-row.reverse .service-buttons {
+    justify-content: flex-start;
+    /* 🔥 same alignment as content */
+}
+
+/* =====================================================
+   SERVICES CTA
+===================================================== */
+
+.services-cta {
+
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+
+    background: #fddca3;
+    color: #2f5e62;
+
+    padding: 70px 20px;
+    /* reduced height */
+
+    text-align: center;
+
+}
+
+.services-cta-inner {
+
+    max-width: 760px;
+    margin: 0 auto;
+
+}
+
+.services-cta h2 {
+
+    font-size: 40px;
+    font-weight: 500;
+
+    margin-bottom: 18px;
+
+}
+
+.services-cta h2::after {
+
+    content: "";
+    display: block;
+
+    width: 80px;
+    height: 6px;
+
+    margin: 18px auto 0;
+
+    background:
+        linear-gradient(#2f5e62, #2f5e62) top center / 60px 2px no-repeat,
+        linear-gradient(#2f5e62, #2f5e62) bottom center / 30px 2px no-repeat;
+
+}
+
+.services-cta p {
+
+    font-size: 22px;
+    line-height: 1.9;
+
+    max-width: 680px;
+
+    margin: 26px auto 36px;
+
+}
+
+.services-cta .btn {
+
+    font-size: 18px;
+    padding: 14px 34px;
+
+}
+
+/* =====================================================
+   REVEAL SYSTEM
+===================================================== */
+
+.reveal-left,
+.reveal-right,
+.reveal-up {
+    opacity: 0;
+    transition:
+        opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+        transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+    will-change: transform, opacity;
+}
+
+.reveal-left {
+    transform: translate3d(-60px, 0, 0);
+}
+
+.reveal-right {
+    transform: translate3d(60px, 0, 0);
+}
+
+.reveal-up {
+    transform: translate3d(0, 60px, 0);
+}
+
+.reveal-left.in-view,
+.reveal-right.in-view,
+.reveal-up.in-view {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+}
+
+/* =====================================================
+   LARGE TABLETS / SMALL LAPTOPS
+===================================================== */
+
+@media (max-width: 1400px) {
+    .services-page .service-row {
+        min-height: 680px;
+    }
+
+    .services-page .service-image,
+    .services-page .service-image img {
+        min-height: 680px;
+    }
+
+    .services-page .service-content {
+        padding: 70px 70px;
+    }
+
+    .services-page .service-title {
+        font-size: 34px;
+    }
+
+    .services-page .service-intro {
+        font-size: 21px;
+    }
+
+    .services-page .service-details {
+        grid-template-columns: repeat(2, minmax(180px, 1fr));
+        gap: 34px;
+        max-width: 860px;
+    }
+}
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 992px) {
+    .services-hero {
+        min-height: 70vh;
+        padding: 120px 24px 90px;
+        background-position: center;
+    }
+
+    .services-title {
+        font-size: 44px;
+    }
+
+    .services-subtitle {
+        font-size: 21px;
+    }
+
+    .services-page .service-row,
+    .services-page .service-row.reverse {
+        grid-template-columns: 1fr;
+        min-height: auto;
+    }
+
+    .services-page .service-row.reverse .reveal-clip:first-child,
+    .services-page .service-row.reverse .reveal-clip:last-child {
+        order: unset;
+    }
+
+    .services-page .service-image,
+    .services-page .service-image img {
+        min-height: 340px;
+        height: 340px;
+    }
+
+    .services-page .service-content {
+        padding: 60px 36px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .services-page .service-title {
+        font-size: 34px;
+    }
+
+    .services-page .service-intro {
+        font-size: 22px;
+        max-width: 760px;
+    }
+
+    .services-page .service-details {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        max-width: 760px;
+        text-align: center;
+    }
+
+    .services-page .service-block ul {
+        padding-left: 0;
+        list-style-position: inside;
+    }
+
+    .services-page .service-buttons {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .services-cta {
+        min-height: auto;
+        padding: 110px 24px;
+    }
+
+    .services-cta h2 {
+        font-size: 40px;
+    }
+
+    .services-cta p {
+        font-size: 22px;
+    }
+
+    /* center reversed rows as well */
+    .services-page .service-row.reverse .service-content {
+
+        align-items: center;
+        text-align: center;
+
+    }
+}
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 768px) {
+    .services-hero {
+        min-height: 100vh;
+        padding: 110px 18px 70px;
+    }
+
+    .services-title {
+        font-size: 40px;
+    }
+
+    .services-subtitle {
+        font-size: 20px;
+        line-height: 1.85;
+        margin-top: 32px;
+    }
+
+    .services-hero-inner {
+        padding: 40px 26px;
+        border-radius: 26px;
+    }
+
+    .services-page .service-image,
+    .services-page .service-image img {
+        min-height: 280px;
+        height: 280px;
+    }
+
+    .services-page .service-content {
+        padding: 46px 24px;
+    }
+
+    .services-page .service-title {
+        font-size: 30px;
+    }
+
+    .services-page .service-intro {
+        font-size: 20px;
+        line-height: 1.85;
+        margin-bottom: 34px;
+    }
+
+    .services-page .service-block h4 {
+        font-size: 18px;
+    }
+
+    .services-page .service-block p,
+    .services-page .service-block li {
+        font-size: 18px;
+        line-height: 1.75;
+    }
+
+    .services-cta {
+        padding: 90px 18px;
+    }
+
+    .services-cta h2 {
+        font-size: 34px;
+    }
+
+    .services-cta p {
+        font-size: 20px;
+        line-height: 1.85;
+        margin-bottom: 36px;
+    }
+
+    .services-cta .btn {
+        width: 100%;
+        max-width: 320px;
+    }
+}

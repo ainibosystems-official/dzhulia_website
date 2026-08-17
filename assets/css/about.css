@@ -1,0 +1,644 @@
+/* =====================================================
+BIO SECTION
+===================================================== */
+
+.about-bio-section {
+    padding: 140px 20px;
+    background: #ffffff;
+}
+
+.about-bio-wrapper {
+    max-width: 2560px;
+    margin: 0 auto;
+}
+
+.about-bio-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+    align-items: center;
+}
+
+.about-bio-image img {
+    width: 100%;
+    border-radius: 24px;
+    box-shadow: 0 40px 100px rgba(0, 0, 0, 0.12);
+}
+
+.about-bio-content p {
+    font-size: 22px;
+    line-height: 1.9;
+    color: #444;
+    margin-bottom: 26px;
+}
+
+
+/* =========================
+ABOUT HERO (IMAGE + CARD)
+========================= */
+
+.about-hero {
+    position: relative;
+}
+
+/* full-screen photo (but not absurdly tall on huge screens) */
+.about-hero-image {
+    min-height: clamp(650px, 100vh, 900px);
+    max-height: 100vh;
+    background:
+        linear-gradient(rgba(255, 248, 244, 0.10),
+            rgba(255, 248, 244, 0.08)),
+        url('../img/about-julia-za-men.jpg') center 30% / cover no-repeat;
+}
+
+/* overlay wrapper (desktop) */
+.about-hero-card-wrap {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 120px 10px;
+    pointer-events: none;
+    /* only visual overlay */
+}
+
+/* the sheet (NO BLUR, only opacity) */
+.about-hero-card {
+    pointer-events: auto;
+
+    max-width: 720px;
+
+    padding: 55px 40px;
+
+    border-radius: 34px;
+
+    background: rgba(255, 255, 255, 0.341);
+
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+
+    border: 1px solid rgba(255, 255, 255, 0.28);
+
+    box-shadow:
+        0 35px 100px rgba(0, 0, 0, 0.22);
+}
+
+.about-hero-title {
+    font-size: 56px;
+    color: #1a4144;
+    margin-bottom: 30px;
+    font-weight: 500;
+    display: block;
+    text-align: center;
+}
+
+.about-hero-title::after {
+
+    content: "";
+
+    display: block;
+
+    width: 80px;
+    height: 6px;
+
+    margin: 20px auto 0;
+
+    background:
+        linear-gradient(#1a4144, #1a4144) top center / 60px 2px no-repeat,
+        linear-gradient(#1a4144, #1a4144) bottom center / 30px 2px no-repeat;
+
+}
+
+.about-hero-card p {
+    font-size: 22px;
+    line-height: 1.9;
+
+    color: #1a4144;
+
+    margin-bottom: 20px;
+
+    text-shadow:
+        0 1px 2px rgba(255, 255, 255, 0.25);
+}
+
+/* tablet */
+@media (max-width: 992px) {
+    .about-hero-card-wrap {
+        padding: 90px 60px;
+    }
+
+    .about-hero-title {
+        font-size: 46px;
+    }
+}
+
+/* mobile: photo FIRST, card BELOW (guaranteed) */
+@media (max-width: 768px) {
+
+    .about-hero-card-wrap {
+        position: static;
+        inset: auto;
+        display: block;
+        padding: 0;
+    }
+
+    .about-hero-image {
+        min-height: 360px;
+    }
+
+    .about-hero-card {
+
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+
+        padding: 40px 26px;
+
+        border-radius: 26px;
+    }
+
+    /* =========================
+MOBILE HERO TEXT CENTER
+========================= */
+
+    .about-hero-card {
+
+        text-align: center;
+
+    }
+
+    .about-hero-title {
+
+        display: block;
+        text-align: center;
+
+    }
+
+    .about-hero-title::after {
+
+        margin: 20px auto 0;
+
+    }
+
+    .about-hero-card p {
+
+        text-align: center;
+
+    }
+}
+
+@media (max-width: 480px) {
+    .about-hero-title {
+        font-size: 38px;
+    }
+
+    .about-hero-card p {
+        font-size: 20px;
+    }
+}
+
+/* =====================================================
+TABLET
+===================================================== */
+
+@media (max-width: 992px) {
+
+    .about-hero-photo {
+        padding: 100px 80px;
+    }
+
+    .about-hero-title {
+        font-size: 46px;
+    }
+
+}
+
+
+/* =====================================================
+MOBILE HERO
+photo first → text below
+===================================================== */
+
+@media (max-width:768px) {
+
+    .about-hero-photo {
+
+        min-height: 320px;
+
+        padding: 0;
+
+        display: block;
+
+        background-position: center;
+
+    }
+
+    .about-hero-card {
+
+        margin: 0;
+
+        background: #ffffff;
+
+        border-radius: 0;
+
+        box-shadow: none;
+
+        padding: 40px 26px;
+
+    }
+
+}
+
+
+/* =====================================================
+SMALL PHONES
+===================================================== */
+
+@media (max-width:480px) {
+
+    .about-hero-title {
+        font-size: 38px;
+    }
+
+    .about-hero-card p {
+        font-size: 20px;
+    }
+
+}
+
+
+/* =========================
+CONNECTED PLAYFUL SECTION
+========================= */
+
+.about-connected-section {
+    padding: 140px 20px;
+    background: linear-gradient(180deg, #e8cfcf 0%, #f7e7e7 100%);
+}
+
+.about-connected-title {
+    font-size: 48px;
+    font-weight: 500;
+    color: #2f5e62;
+    text-align: center;
+    margin-bottom: 90px;
+    padding: 0 20px;
+}
+
+.about-connected-wrap {
+    max-width: 2560px;
+    margin: 0 48px;
+    position: relative;
+}
+
+@media (max-width: 768px) {
+
+    .about-connected-wrap {
+        margin: 0 6px;
+    }
+
+}
+
+
+
+/* background bubbles */
+
+.about-connected-wrap::before {
+    content: "";
+    position: absolute;
+    inset: -40px;
+    background:
+        radial-gradient(circle at 15% 20%, rgba(255, 189, 89, 0.30), transparent 45%),
+        radial-gradient(circle at 85% 30%, rgba(0, 151, 178, 0.22), transparent 46%),
+        radial-gradient(circle at 40% 85%, rgba(47, 94, 98, 0.18), transparent 48%);
+    pointer-events: none;
+}
+
+/* ==============================
+   ABOUT PAGE HEADING ACCENT
+============================== */
+
+.about-connected-title::after {
+
+    content: "";
+
+    display: block;
+
+    width: 80px;
+    height: 6px;
+
+    margin: 20px auto 0;
+
+    background:
+        linear-gradient(#2f5e62, #2f5e62) top center / 60px 2px no-repeat,
+        linear-gradient(#2f5e62, #2f5e62) bottom center / 30px 2px no-repeat;
+
+}
+
+/* =========================
+GRID
+========================= */
+
+.about-connected-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    border-radius: 34px;
+    overflow: hidden;
+
+    box-shadow:
+        0 40px 110px rgba(0, 0, 0, 0.12);
+}
+
+/* =========================
+CARD
+========================= */
+
+.about-pill {
+
+    background: rgba(255, 255, 255, 0.94);
+
+    border-right: 1px solid rgba(47, 94, 98, 0.14);
+    border-bottom: 1px solid rgba(47, 94, 98, 0.14);
+
+    transition:
+        transform .25s ease,
+        background .25s ease;
+
+    overflow: hidden;
+}
+
+.about-pill:hover {
+
+    transform: translateY(-6px);
+    background: rgba(255, 255, 255, 0.98);
+
+}
+
+.about-pill:last-child {
+    border-right: none;
+}
+
+/* =========================
+TOP COLOR BAR
+========================= */
+
+.about-pill::before {
+
+    content: "";
+    display: block;
+
+    height: 6px;
+    width: 100%;
+
+    background: #FFBD59;
+
+}
+
+/* alternate colors */
+
+.about-pill:nth-child(2)::before,
+.about-pill:nth-child(5)::before {
+    background: #0097B2;
+}
+
+.about-pill:nth-child(3)::before,
+.about-pill:nth-child(6)::before {
+    background: #2f5e62;
+}
+
+.about-pill h3 {
+
+    font-size: 28px;
+    font-weight: 500;
+
+    color: #2f5e62;
+
+    margin-bottom: 14px;
+
+    text-align: center;
+
+}
+
+.about-pill p {
+
+    font-size: 21px;
+    line-height: 1.8;
+
+    color: #444;
+
+    text-align: center;
+
+}
+
+.pill-dot {
+    animation: dotPulse 3s infinite ease-in-out;
+}
+
+@keyframes dotPulse {
+
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.15);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+
+}
+
+
+
+/* =========================
+IMAGE AREA
+========================= */
+
+.pill-image {
+
+    width: 100%;
+
+    height: 240px;
+    /* large image area */
+
+    overflow: hidden;
+
+}
+
+.pill-image img {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform .4s ease;
+
+}
+
+.about-pill:hover .pill-image img {
+
+    transform: scale(1.05);
+
+}
+
+/* =========================
+DOT BETWEEN IMAGE AND TITLE
+========================= */
+
+.pill-dot {
+
+    width: 14px;
+    height: 14px;
+
+    border-radius: 50%;
+
+    background: #FFBD59;
+
+    margin: 38px auto 14px;
+
+    box-shadow:
+        0 8px 20px rgba(255, 189, 89, 0.35);
+
+}
+
+.about-pill h3 {
+    margin-top: -28px;
+}
+
+/* alternate colors */
+
+.about-pill:nth-child(2) .pill-dot,
+.about-pill:nth-child(5) .pill-dot {
+
+    background: #0097B2;
+
+    box-shadow:
+        0 8px 20px rgba(0, 151, 178, 0.35);
+
+}
+
+.about-pill:nth-child(3) .pill-dot,
+.about-pill:nth-child(6) .pill-dot {
+
+    background: #2f5e62;
+
+    box-shadow:
+        0 8px 20px rgba(47, 94, 98, 0.35);
+
+}
+
+/* =========================
+TEXT AREA
+========================= */
+
+.pill-content {
+
+    padding: 36px 42px 42px;
+
+}
+
+.about-pill h3 {
+
+    font-size: 28px;
+    font-weight: 500;
+
+    color: #2f5e62;
+
+    margin-bottom: 14px;
+
+}
+
+.about-pill p {
+
+    font-size: 21px;
+    line-height: 1.8;
+
+    color: #444;
+
+}
+
+/* =========================
+RESPONSIVE
+========================= */
+
+@media (max-width: 992px) {
+
+    .about-connected-grid {
+        grid-template-columns: 1fr;
+        border-radius: 26px;
+    }
+
+    .about-pill {
+        border-right: none;
+        border-bottom: 1px solid rgba(47, 94, 98, 0.14);
+    }
+
+    .about-pill:last-child {
+        border-bottom: none;
+    }
+
+    .pill-image {
+        height: 200px;
+    }
+
+    /* 🔥 MOBILE TEXT PADDING */
+    .pill-content {
+        padding: 28px 18px 32px;
+    }
+
+}
+/* =====================================================
+CTA
+===================================================== */
+
+.about-cta-section {
+
+    padding: 70px 20px;
+    background: #fddca3;
+    text-align: center;
+
+}
+
+.about-cta-inner {
+
+    max-width: 800px;
+    margin: 0 auto;
+
+}
+
+.about-cta-inner h2 {
+
+    font-size: 40px;
+    color: #2f5e62;
+    margin-bottom: 20px;
+
+}
+
+.about-cta-inner p {
+
+    font-size: 22px;
+    line-height: 1.8;
+    margin-bottom: 40px;
+    color: #2f5e62;
+
+}
+
+.about-cta-inner h2::after {
+
+    content: "";
+
+    display: block;
+
+    width: 80px;
+    height: 6px;
+
+    margin: 18px auto 0;
+
+    background:
+        linear-gradient(#2f5e62, #2f5e62) top center / 60px 2px no-repeat,
+        linear-gradient(#2f5e62, #2f5e62) bottom center / 30px 2px no-repeat;
+}

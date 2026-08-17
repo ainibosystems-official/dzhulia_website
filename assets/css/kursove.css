@@ -1,0 +1,698 @@
+/* =====================================================
+PAGE BASE
+===================================================== */
+
+.kursove-page {
+    background: linear-gradient(180deg, #f7eded 0%, #f6e9e9 36%, #ffffff 100%);
+    overflow-x: hidden;
+}
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.kursove-hero {
+    position: relative;
+
+    min-height: 100vh;
+    max-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 150px 20px 120px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(rgba(255, 248, 244, 0.10),
+            rgba(255, 248, 244, 0.08)),
+        url('../img/courses-hero.jpg') center center / cover no-repeat;
+}
+
+.kursove-hero-overlay {
+    position: absolute;
+    inset: 0;
+}
+
+.kursove-hero-inner {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    max-width: 920px;
+
+    margin: 0 auto;
+
+    padding: 55px 40px;
+
+    border-radius: 34px;
+
+    background: rgba(255, 255, 255, 0.34);
+
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+
+    border: 1px solid rgba(255, 255, 255, 0.28);
+
+    box-shadow:
+        0 35px 100px rgba(0, 0, 0, 0.22);
+}
+
+.kursove-title {
+    margin: 0;
+
+    font-size: clamp(46px, 5vw, 64px);
+    font-weight: 500;
+    line-height: 1.1;
+
+    color: #1a4144;
+
+    display: inline-block;
+}
+
+/* =====================================================
+   DOUBLE LINES
+===================================================== */
+
+.kursove-title::after {
+
+    content: "";
+
+    display: block;
+
+    width: 80px;
+    height: 6px;
+
+    margin: 20px auto 0;
+
+    background:
+        linear-gradient(#1a4144, #1a4144) top center / 60px 2px no-repeat,
+        linear-gradient(#1a4144, #1a4144) bottom center / 30px 2px no-repeat;
+}
+
+.kursove-subtitle {
+    font-size: 24px;
+    line-height: 1.9;
+
+    color: #1a4144;
+
+    text-shadow:
+        0 1px 2px rgba(255, 255, 255, 0.25);
+
+    margin-top: 38px;
+}
+
+/* =====================================================
+   SECTION HEADER
+===================================================== */
+
+.kursove-listing-section {
+    padding: 120px 0;
+    background: #f6e9e9;
+}
+
+.kursove-section-head {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.kursove-section-title {
+    margin: 0;
+
+    font-size: 56px;
+    font-weight: 500;
+    line-height: 1.2;
+
+    color: #1a4144;
+
+    display: inline-block;
+}
+
+/* =====================================================
+   DOUBLE LINES
+===================================================== */
+
+.kursove-section-title::after {
+
+    content: "";
+
+    display: block;
+
+    width: 80px;
+    height: 6px;
+
+    margin: 20px auto 0;
+
+    background:
+        linear-gradient(#1a4144, #1a4144) top center / 60px 2px no-repeat,
+        linear-gradient(#1a4144, #1a4144) bottom center / 30px 2px no-repeat;
+}
+
+.kursove-section-text {
+    max-width: 940px;
+
+    margin: 38px auto 0;
+
+    font-size: 24px;
+    line-height: 1.9;
+
+    color: #4d4747;
+}
+
+
+/* =====================================================
+ROWS WRAPPER
+===================================================== */
+
+.kursove-rows {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* =====================================================
+COURSE ROW (FULL WIDTH — NO REVERSE)
+===================================================== */
+
+.kursove-row {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+
+    /* 🔥 FULL WIDTH */
+    width: 100vw;
+    margin-left: 50%;
+    transform: translateX(-50%);
+
+    padding: 60px 54px;
+
+    background: #f3fbfa;
+    border-radius: 18px;
+
+    position: relative;
+    z-index: 1;
+
+    transition:
+        transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+        box-shadow 0.4s ease;
+}
+
+/* =====================================================
+IMAGE
+===================================================== */
+
+.kursove-row-media {
+    flex: 1;
+    max-width: 1024px;
+    max-height: 350px;
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+.kursove-row-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+
+    transition: transform 0.5s ease;
+}
+
+.kursove-row:hover .kursove-row-image {
+    transform: scale(1.05);
+}
+
+/* =====================================================
+CONTENT
+===================================================== */
+
+.kursove-row-content {
+    flex: 1;
+}
+
+.kursove-row-title {
+    font-size: 40px;
+    /* 🔥 was 32 */
+    font-weight: 500;
+    line-height: 1.25;
+    margin-bottom: 20px;
+    color: #214b4f;
+}
+
+
+.kursove-row-title a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.kursove-row-text {
+    font-size: 23px;
+    /* 🔥 was 20–22 */
+    line-height: 1.95;
+    margin-bottom: 28px;
+    color: #5a5454;
+}
+
+/* =====================================================
+PRICE — EXACT PRODUKTI MATCH (FORCED)
+===================================================== */
+
+.kursove-row-price {
+    font-size: 28px;
+    font-weight: 500;
+    color: #3c2f2f;
+    margin-bottom: 30px;
+}
+
+/* OLD PRICE */
+
+.kursove-row-price del,
+.kursove-row-price del .woocommerce-Price-amount {
+    color: #e28b8b !important;
+    font-size: 28px !important;
+    margin-right: 10px;
+}
+
+/* NEW PRICE (BIGGER) */
+
+.kursove-row-price ins,
+.kursove-row-price ins .woocommerce-Price-amount {
+    color: #7bc47f !important;
+    font-size: 32px !important;
+    /* 🔥 BIG */
+    font-weight: 700 !important;
+    text-decoration: none !important;
+}
+
+/* =====================================================
+KURSOVE BUTTONS — SAME AS PRODUKTI
+===================================================== */
+
+.kursove-row-actions a {
+    min-width: 180px;
+    padding: 16px 32px;
+    border-radius: 999px;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    transition: 0.4s ease;
+}
+
+/* PRIMARY */
+
+.kursove-row-actions .add_to_cart_button,
+.kursove-row-actions .button,
+.kursove-row-actions .btn-primary {
+    background: var(--brand-gold);
+    color: #fff !important;
+    border: none;
+}
+
+.kursove-row-actions .add_to_cart_button:hover,
+.kursove-row-actions .button:hover,
+.kursove-row-actions .btn-primary:hover {
+    background: var(--gold-dark);
+    transform: translateY(-1px);
+    box-shadow: 0 10px 24px rgba(255, 189, 89, 0.35);
+}
+
+/* SECONDARY */
+
+.kursove-row-actions .btn-secondary {
+    background: rgba(0, 151, 178, 0.15);
+    color: var(--brand-teal);
+}
+
+.kursove-row-actions .btn-secondary:hover {
+    background: rgba(0, 151, 178, 0.25);
+}
+
+.kursove-row-actions {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.kursove-row-actions .produkti-btn,
+.kursove-row-actions .button,
+.kursove-row-actions .add_to_cart_button {
+    min-width: 180px;
+    padding: 16px 32px;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 600 !important;
+    font-size: 18px;
+    text-align: center;
+    border: none;
+    transition:
+        transform 0.45s ease,
+        box-shadow 0.45s ease,
+        background 0.45s ease;
+}
+
+/* PRIMARY */
+.kursove-row-actions .produkti-btn-primary,
+.kursove-row-actions .add_to_cart_button,
+.kursove-row-actions .button {
+    background: var(--brand-gold) !important;
+    color: #ffffff !important;
+}
+
+.kursove-row-actions .produkti-btn-primary:hover,
+.kursove-row-actions .add_to_cart_button:hover,
+.kursove-row-actions .button:hover {
+    background: var(--gold-dark) !important;
+    transform: translateY(-1px);
+    box-shadow: 0 10px 24px rgba(255, 189, 89, 0.35);
+}
+
+/* SECONDARY */
+.kursove-row-actions .produkti-btn-secondary {
+    background: rgba(0, 151, 178, 0.15) !important;
+    color: var(--brand-teal) !important;
+}
+
+.kursove-row-actions .produkti-btn-secondary:hover {
+    background: rgba(0, 151, 178, 0.25) !important;
+    color: var(--brand-teal) !important;
+    box-shadow: 0 8px 18px rgba(192, 106, 77, 0.18);
+}
+
+/* =====================================================
+HOVER EFFECT
+===================================================== */
+
+.kursove-listing-section {
+    perspective: 1200px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+
+    .kursove-row:hover {
+        transform: translateX(-50%) translateY(-2px) scale(1.01);
+        box-shadow:
+            0 25px 60px rgba(0, 0, 0, 0.15),
+            0 45px 100px rgba(0, 0, 0, 0.12);
+        z-index: 2;
+    }
+
+}
+
+@media (hover: none) and (pointer: coarse) {
+
+    .kursove-row:active {
+        transform: translateX(-50%) translateY(-2px) scale(1.01);
+        box-shadow:
+            0 20px 50px rgba(0, 0, 0, 0.18);
+    }
+
+}
+
+/* =====================================================
+ANIMATION
+===================================================== */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(60px);
+    transition: opacity 0.9s ease, transform 0.9s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* =====================================================
+MOBILE
+===================================================== */
+
+@media (max-width: 992px) {
+
+    .kursove-row {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 20px;
+    }
+
+    .kursove-row-media {
+        width: 100%;
+        max-height: 260px;
+    }
+
+    .kursove-row-actions {
+        justify-content: center;
+    }
+
+}
+
+/* =====================================================
+   INFO (COPY FROM PRODUKTI)
+===================================================== */
+
+.produkti-info-section {
+    padding: 140px 0;
+    background: linear-gradient(180deg, #ffffff 0%, #fcf8f8 100%);
+}
+
+.produkti-info-box {
+    max-width: 2560px;
+    margin: 0 auto;
+    padding: 72px 70px;
+    text-align: center;
+    border-radius: 34px;
+    background: #ffffff;
+    box-shadow:
+        0 22px 54px rgba(0, 0, 0, 0.06),
+        0 50px 120px rgba(0, 0, 0, 0.035);
+}
+
+.produkti-info-title {
+    margin: 0;
+    font-size: clamp(38px, 4vw, 52px);
+    font-weight: 500;
+    line-height: 1.15;
+    color: #214b4f;
+}
+
+.produkti-info-box p {
+    margin: 26px 0 0;
+    font-size: 22px;
+    line-height: 1.9;
+    color: #4f4949;
+}
+
+
+/* =====================================================
+   CTA (COPY FROM PRODUKTI)
+===================================================== */
+
+.produkti-cta-section {
+    padding: 0 0 130px;
+}
+
+.produkti-cta-box {
+    max-width: 2560px;
+    margin: 0 auto;
+    padding: 66px 60px;
+    text-align: center;
+    border-radius: 34px;
+    background: linear-gradient(135deg, #214b4f 0%, #2f5e62 100%);
+    box-shadow: 0 28px 70px rgba(33, 75, 79, 0.22);
+}
+
+.produkti-cta-box h2 {
+    margin: 0 0 18px;
+    font-size: clamp(36px, 4vw, 48px);
+    font-weight: 500;
+    line-height: 1.15;
+    color: #ffffff;
+}
+
+.produkti-cta-box p {
+    margin: 0 auto 30px;
+    font-size: 22px;
+    line-height: 1.9;
+    color: rgba(255, 255, 255, 0.92);
+}
+
+/* =====================================================
+KURSOVE BUTTONS — SAME AS PRODUKTI
+===================================================== */
+
+.kursove-row-actions a {
+    min-width: 180px;
+    padding: 16px 32px;
+    border-radius: 999px;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    transition: 0.4s ease;
+}
+
+/* PRIMARY */
+
+.kursove-row-actions .add_to_cart_button,
+.kursove-row-actions .button,
+.kursove-row-actions .btn-primary {
+    background: var(--brand-gold);
+    color: #fff !important;
+    border: none;
+}
+
+.kursove-row-actions .add_to_cart_button:hover,
+.kursove-row-actions .button:hover,
+.kursove-row-actions .btn-primary:hover {
+    background: var(--gold-dark);
+    transform: translateY(-1px);
+    box-shadow: 0 10px 24px rgba(255, 189, 89, 0.35);
+}
+
+/* SECONDARY */
+
+.kursove-row-actions .btn-secondary {
+    background: rgba(0, 151, 178, 0.15);
+    color: var(--brand-teal);
+}
+
+.kursove-row-actions .btn-secondary:hover {
+    background: rgba(0, 151, 178, 0.25);
+}
+
+.produkti-btn,
+.produkti-btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 16px 32px;
+
+    border-radius: 999px;
+
+    background: #f4b85a;
+    color: #ffffff;
+
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1;
+
+    text-decoration: none;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+@media (max-width: 425px) {
+
+    /* =====================================================
+       LISTING SECTION
+    ===================================================== */
+
+    .kursove-listing-section {
+        padding: 70px 0;
+    }
+
+    .kursove-section-head {
+        margin-bottom: 36px;
+        padding: 0 12px;
+    }
+
+    .kursove-section-text {
+        margin-top: 22px;
+        padding: 0 12px;
+    }
+
+    /* =====================================================
+       COURSE ROWS
+    ===================================================== */
+
+    .kursove-rows {
+        gap: 18px;
+    }
+
+    .kursove-row {
+
+        gap: 14px;
+
+        padding: 18px 10px !important;
+
+        border-radius: 0;
+    }
+
+    .kursove-row-media {
+        max-height: 220px;
+        border-radius: 12px;
+    }
+
+    .kursove-row-content,
+    .kursove-row-content p,
+    .kursove-row-content span,
+    .kursove-row-text,
+    .kursove-row-text p,
+    .kursove-row-title,
+    .kursove-row-price {
+
+        width: 100% !important;
+        max-width: 100% !important;
+
+        display: block !important;
+    }
+
+    .kursove-row-content {
+        padding: 0 4px;
+    }
+
+    .kursove-row-title {
+        margin-bottom: 10px;
+    }
+
+    .kursove-row-text {
+
+        margin-bottom: 16px;
+
+        line-height: 1.7;
+    }
+
+    .kursove-row-price {
+        margin-bottom: 16px;
+    }
+
+    /* =====================================================
+       BUTTONS
+    ===================================================== */
+
+    .kursove-row-actions {
+        gap: 8px;
+    }
+
+    .kursove-row-actions .produkti-btn,
+    .kursove-row-actions .button,
+    .kursove-row-actions .add_to_cart_button {
+
+        width: 100%;
+        max-width: 240px;
+    }
+
+    /* =====================================================
+       INFO SECTION
+    ===================================================== */
+
+    .produkti-info-section {
+        padding: 70px 10px;
+    }
+
+    .produkti-info-box {
+
+        padding: 36px 16px !important;
+
+        border-radius: 18px;
+    }
+
+}

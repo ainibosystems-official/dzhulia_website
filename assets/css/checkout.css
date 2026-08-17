@@ -1,0 +1,1460 @@
+/* =====================================================
+   CHECKOUT PAGE â€“ COMPLETE REDESIGN
+===================================================== */
+
+body.woocommerce-checkout {
+    background: linear-gradient(180deg, #f7eded 0%, #ffffff 100%);
+    font-family: "Adys", sans-serif;
+    color: #3f3434;
+}
+
+/* Main Container */
+body.woocommerce-checkout .site-content {
+    max-width: 1200px;
+    margin: 160px auto 60px;
+    padding: 40px;
+}
+
+/* Checkout Wrapper */
+.wp-block-woocommerce-checkout {
+    background: #ffffff;
+    padding: 50px;
+    border-radius: 24px;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.06);
+}
+
+/* =====================================================
+   TYPOGRAPHY
+===================================================== */
+
+body.woocommerce-checkout h1 {
+    font-size: 44px !important;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #3f3434;
+}
+
+body.woocommerce-checkout h2 {
+    font-size: 28px !important;
+    font-weight: 700;
+    color: #214b4f;
+}
+
+body.woocommerce-checkout h3 {
+    font-size: 24px !important;
+    font-weight: 700;
+    color: #214b4f;
+}
+
+body.woocommerce-checkout label {
+    font-size: 18px;
+    font-weight: 600;
+    color: #444;
+}
+
+/* =====================================================
+   FORM FIELDS
+===================================================== */
+
+body.woocommerce-checkout input,
+body.woocommerce-checkout select,
+body.woocommerce-checkout textarea {
+    width: 100%;
+    padding: 16px;
+    font-size: 18px;
+    border-radius: 12px;
+    border: 2px solid #f1e4e4;
+    background: #ffffff;
+    transition: all 0.3s ease;
+}
+
+body.woocommerce-checkout input:focus,
+body.woocommerce-checkout select:focus,
+body.woocommerce-checkout textarea:focus {
+    border-color: #7bc47f;
+    box-shadow: 0 0 0 3px rgba(123, 196, 127, 0.15);
+    outline: none;
+}
+
+/* =====================================================
+   ORDER SUMMARY
+===================================================== */
+
+.wp-block-woocommerce-checkout-order-summary-block {
+    background: #fff7e6;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.05);
+
+    /* FULL WIDTH ALWAYS */
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
+/* FORCE ORDER */
+.wp-block-woocommerce-checkout-fields-block {
+    order: 1;
+}
+
+.wp-block-woocommerce-checkout-order-summary-block {
+    order: 2;
+}
+
+/* Product Titles */
+.wc-block-components-product-name {
+    font-size: 18px !important;
+    font-weight: 600;
+    color: #214b4f;
+}
+
+/* =====================================================
+   PRICE COLORS
+===================================================== */
+
+.wc-block-formatted-money-amount,
+.wc-block-components-product-price,
+.wc-block-components-product-price__value {
+
+    color: #7bc47f !important;
+
+    font-weight: 700 !important;
+
+    font-size: 22px !important;
+
+    line-height: 1.2;
+}
+
+ins .wc-block-formatted-money-amount {
+    color: #7bc47f !important;
+    text-decoration: none;
+}
+
+del .wc-block-formatted-money-amount {
+    color: #e28b8b !important;
+    font-weight: 500;
+    opacity: 0.9;
+}
+
+del {
+    text-decoration: line-through;
+    text-decoration-thickness: 1.5px;
+}
+
+/* Totals */
+.wc-block-components-totals-item__label {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.wc-block-components-totals-item__value {
+    font-size: 18px;
+    font-weight: 700;
+    color: #214b4f !important;
+}
+
+/* Grand Total */
+.wc-block-components-totals-footer-item .wc-block-components-totals-item__value {
+    font-size: 24px !important;
+    color: #7bc47f !important;
+}
+
+/* =====================================================
+   BUTTON â€“ FINAL (ADYS + ALIGNMENT + STABLE)
+===================================================== */
+
+.wc-block-components-button {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+
+    font-family: "Adys", sans-serif !important;
+    /* ðŸ”¥ FORCE YOUR FONT */
+    font-size: 20px !important;
+    font-weight: 700 !important;
+    line-height: 1.2;
+
+    text-align: center;
+    white-space: nowrap;
+
+    letter-spacing: 0.3px;
+    /* optional â€“ looks premium */
+    color: #ffffff !important;
+}
+
+/* Woo sometimes wraps text inside span */
+.wc-block-components-button * {
+    font-family: "Adys", sans-serif !important;
+}
+
+/* =====================================================
+   ERROR MESSAGE
+===================================================== */
+
+.wc-block-components-notice-banner.is-error {
+    background: #fdeaea;
+    border-left: 5px solid #e28b8b;
+    border-radius: 12px;
+    font-size: 16px;
+}
+
+/* =====================================================
+   PRODUCT CLEANUP
+===================================================== */
+
+.wc-block-components-order-summary-item {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 12px;
+    margin-bottom: 12px;
+}
+
+.wc-block-components-product-details,
+.wc-block-components-product-metadata {
+    display: none !important;
+}
+
+.wc-block-components-product-name {
+    display: block !important;
+}
+
+/* =====================================================
+   FINAL ORDER FIX â€“ CONSISTENT ALL DEVICES
+===================================================== */
+
+
+/* ðŸ”¥ IMPORTANT: Force correct order ALWAYS */
+.wp-block-woocommerce-checkout-order-summary-block {
+    order: 2 !important;
+}
+
+.wp-block-woocommerce-checkout-fields-block {
+    order: 1 !important;
+}
+
+/* Make everything full width */
+.wp-block-woocommerce-checkout-order-summary-block,
+.wp-block-woocommerce-checkout-fields-block {
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
+/* =====================================================
+   KILL FLOAT / STICKY SUMMARY (REAL ISSUE)
+===================================================== */
+
+.wp-block-woocommerce-checkout-order-summary-block {
+    position: relative !important;
+    top: auto !important;
+    right: auto !important;
+    left: auto !important;
+    transform: none !important;
+}
+
+/* If WooCommerce uses sticky */
+.wc-block-components-sidebar,
+.is-sticky {
+    position: relative !important;
+    top: auto !important;
+}
+
+/* =====================================================
+   DESTROY INTERNAL WOOCOMMERCE GRID (REAL FIX)
+===================================================== */
+
+/* This is the ACTUAL layout container Woo uses */
+.wc-block-checkout__main,
+.wc-block-checkout__sidebar {
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
+/* Kill the 2-column grid */
+.wc-block-checkout {
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+/* ðŸ”¥ CRITICAL: reset sidebar behavior */
+.wc-block-checkout__sidebar {
+    position: relative !important;
+    order: 2 !important;
+}
+
+/* Main form always first */
+.wc-block-checkout__main {
+    order: 1 !important;
+}
+
+/* =====================================================
+   MOVE ORDER BUTTON BELOW TOTAL
+===================================================== */
+
+/* Order elements */
+.wc-block-checkout__main {
+    order: 1;
+}
+
+.wc-block-checkout__sidebar {
+    order: 2;
+}
+
+/* ðŸ”¥ Move button LAST */
+.wc-block-checkout__actions {
+    order: 3 !important;
+    width: 100% !important;
+}
+
+/* Make button full width and aligned */
+.wc-block-checkout__actions .wc-block-components-button {
+    width: 100% !important;
+    margin-top: 20px;
+}
+
+/* =====================================================
+   FINAL CLEAN LAYOUT (NO CONFLICTS)
+===================================================== */
+
+/* Main Woo layout */
+.wc-block-checkout {
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+/* Sections order */
+.wc-block-checkout__main {
+    order: 1 !important;
+    width: 100% !important;
+}
+
+.wc-block-checkout__sidebar {
+    order: 2 !important;
+    width: 100% !important;
+    position: relative !important;
+}
+
+/* Order button LAST */
+.wc-block-checkout__actions {
+    order: 3 !important;
+    width: 100% !important;
+    margin-top: 20px;
+}
+
+/* Button full width */
+.wc-block-checkout__actions .wc-block-components-button {
+    width: 100% !important;
+}
+
+/* =====================================================
+   MOBILE â€“ FIX ORDER SUMMARY LAYOUT
+===================================================== */
+
+@media (max-width: 768px) {
+
+    /* Each product becomes vertical */
+    .wc-block-components-order-summary-item {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 10px;
+    }
+
+    /* Image */
+    .wc-block-components-order-summary-item__image img {
+        width: 70px;
+        border-radius: 10px;
+    }
+
+    /* Title */
+    .wc-block-components-product-name {
+        font-size: 16px !important;
+        line-height: 1.4;
+        word-break: break-word;
+    }
+
+    /* Price BELOW title */
+    .wc-block-components-order-summary-item__total-price {
+        font-size: 16px;
+        font-weight: 700;
+        color: #7bc47f;
+    }
+
+    /* Make sure price is not floating right */
+    .wc-block-components-order-summary-item__prices {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+.wc-block-components-order-summary-item {
+    padding: 10px 0;
+}
+
+/* =====================================================
+   GLOBAL OFFSET FOR FIXED HEADER
+===================================================== */
+
+body.woocommerce-checkout {
+    padding-top: 30px;
+    /* adjust if needed */
+}
+
+/* =====================================================
+   CHECKOUT â€“ MATCH CART PRICE STYLING
+===================================================== */
+
+/* Container */
+.wc-block-components-product-price {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+/* OLD PRICE (red) */
+.wc-block-components-product-price del {
+    font-size: 16px;
+    color: #e28b8b !important;
+    opacity: 0.85;
+    margin-right: 6px;
+}
+
+/* NEW PRICE (green) */
+.wc-block-components-product-price ins {
+    font-size: 18px;
+    color: #7bc47f !important;
+    text-decoration: none;
+}
+
+/* Fallback (if Woo skips ins/del) */
+.wc-block-components-product-price__regular {
+    color: #e28b8b !important;
+}
+
+.wc-block-components-product-price__value {
+    color: #5dc662 !important;
+}
+
+/* =====================================================
+   LOGO FIX â€” MOBILE
+===================================================== */
+
+@media (max-width: 640px) {
+
+    .site-header img,
+    .custom-logo,
+    .logo img {
+
+        max-height: 60px !important;
+        width: auto !important;
+        height: auto !important;
+
+        object-fit: contain;
+    }
+}
+
+/* =====================================================
+   EUR OT BGN
+===================================================== */
+.bgn-price-added {
+
+    margin-top: 4px;
+
+    font-size: 18px;
+
+    line-height: 1.4;
+
+    color: #4d4747;
+
+    opacity: 0.75;
+
+}
+
+/* =====================================================
+   320PX MOBILE FIX — CHECKOUT CENTERING
+===================================================== */
+
+@media (max-width: 425px) {
+
+    body.woocommerce-checkout .site-content {
+
+        padding: 10px !important;
+
+        margin-top: 120px !important;
+    }
+
+    .wp-block-woocommerce-checkout {
+
+        padding: 18px 10px !important;
+
+        border-radius: 18px;
+    }
+
+    .wc-block-checkout__main,
+    .wc-block-checkout__sidebar {
+
+        width: 100% !important;
+
+        max-width: 100% !important;
+
+        margin: 0 !important;
+
+        padding: 0 !important;
+    }
+
+    /* =====================================================
+       ORDER SUMMARY CARD
+    ===================================================== */
+
+    .wp-block-woocommerce-checkout-order-summary-block {
+
+        width: 100% !important;
+
+        max-width: 100% !important;
+
+        padding: 18px 12px !important;
+
+        border-radius: 16px;
+    }
+
+    /* =====================================================
+       PRODUCT ROWS
+    ===================================================== */
+
+    .wc-block-components-order-summary-item {
+
+        gap: 12px !important;
+
+        padding: 12px 0 !important;
+    }
+
+    .wc-block-components-product-name {
+
+        font-size: 15px !important;
+
+        line-height: 1.45 !important;
+
+        word-break: break-word;
+    }
+
+    .wc-block-components-product-price,
+    .wc-block-components-product-price__value,
+    .wc-block-formatted-money-amount {
+
+        font-size: 18px !important;
+    }
+
+    /* =====================================================
+       BGN TEXT
+    ===================================================== */
+
+    .bgn-price-added {
+
+        font-size: 14px !important;
+
+        line-height: 1.45;
+    }
+
+}
+
+/* =====================================================
+   CHECKOUT — LAYOUT + HEADER SPACING
+===================================================== */
+
+/* Desktop */
+body.woocommerce-checkout .site-content {
+
+    max-width: 1200px !important;
+
+    width: calc(100% - 40px) !important;
+
+    margin: 180px auto 80px !important;
+
+    padding: 40px !important;
+
+    box-sizing: border-box !important;
+}
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 768px) {
+
+    body.woocommerce-checkout .site-content {
+
+        width: calc(100% - 24px) !important;
+
+        max-width: 100% !important;
+
+        margin: 140px auto 0 !important;
+
+        padding: 12px !important;
+
+        box-sizing: border-box !important;
+    }
+
+    body.woocommerce-checkout .wp-block-woocommerce-checkout {
+
+        width: 100% !important;
+
+        margin-left: auto !important;
+
+        margin-right: auto !important;
+
+        padding: 18px !important;
+
+        border-radius: 20px !important;
+    }
+}
+/* =====================================================
+   THANK YOU PAGE
+===================================================== */
+
+.woocommerce-order {
+
+    max-width: 1100px;
+
+    margin: 220px auto 120px;
+
+    padding: 50px;
+
+    background: #ffffff;
+
+    border-radius: 28px;
+
+    box-shadow: 0 20px 60px rgba(0,0,0,0.06);
+}
+
+/* Main titles */
+
+.woocommerce-order h2 {
+
+    font-size: 34px !important;
+
+    color: #214b4f;
+
+    margin-bottom: 25px;
+
+    font-family: "Adys", sans-serif;
+}
+
+/* Green accents */
+
+.woocommerce-order strong,
+.woocommerce-order b {
+
+    color: #7bc47f;
+}
+
+/* =====================================================
+   TABLE
+===================================================== */
+
+.woocommerce-order table {
+
+    width: 100%;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    border: 1px solid #f1e4e4;
+
+    border-collapse: collapse;
+}
+
+/* Table headers */
+
+.woocommerce-order th {
+
+    background: #fdf4f4;
+
+    color: #214b4f;
+
+    font-weight: 700;
+}
+
+/* Table cells */
+
+.woocommerce-order td,
+.woocommerce-order th {
+
+    padding: 18px !important;
+
+    font-size: 17px;
+
+    font-family: "Adys", sans-serif;
+}
+
+/* Row hover */
+
+.woocommerce-order tbody tr {
+
+    transition: background 0.25s ease;
+}
+
+.woocommerce-order tbody tr:hover {
+
+    background: #fff8f8;
+}
+
+/* =====================================================
+   PRODUCT LINKS
+===================================================== */
+
+.woocommerce-order a {
+
+    color: #214b4f !important;
+
+    text-decoration: none !important;
+
+    font-weight: 600;
+
+    transition: all 0.25s ease;
+}
+
+.woocommerce-order a:hover {
+
+    color: #7bc47f !important;
+}
+
+/* Product names */
+
+.woocommerce-order .product-name a {
+
+    font-size: 17px !important;
+
+    line-height: 1.6;
+
+    font-family: "Adys", sans-serif;
+}
+
+/* Quantity */
+
+.woocommerce-order .product-quantity {
+
+    color: #7bc47f;
+
+    font-weight: 700;
+}
+
+/* =====================================================
+   ADDRESS BOX
+===================================================== */
+
+.woocommerce-order address {
+
+    background: #fff8f8;
+
+    padding: 24px;
+
+    border-radius: 18px;
+
+    line-height: 1.8;
+
+    border: 1px solid #f3dddd;
+}
+
+/* =====================================================
+   REQUIRED FIELD STAR
+===================================================== */
+
+.required {
+
+    color: #e28b8b !important;
+
+    font-size: 18px;
+
+    margin-left: 4px;
+}
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .woocommerce-order {
+
+        margin: 150px 14px 80px;
+
+        padding: 22px;
+    }
+
+    .woocommerce-order h2 {
+
+        font-size: 26px !important;
+    }
+
+    .woocommerce-order td,
+    .woocommerce-order th {
+
+        padding: 14px !important;
+
+        font-size: 15px;
+    }
+
+    .woocommerce-order .product-name a {
+
+        font-size: 15px !important;
+    }
+
+    .woocommerce-order address {
+
+        padding: 18px;
+    }
+}
+
+/* =====================================================
+   REQUIRED FIELD ASTERISK – WOO BLOCKS
+===================================================== */
+
+.wc-block-components-text-input:not(.wc-block-components-address-form__company) label::after,
+.wc-block-components-select label::after {
+
+    content: " *";
+
+    color: #e28b8b;
+
+    font-size: 18px;
+
+    font-weight: 700;
+}
+
+/* =====================================================
+   CUSTOM THANK YOU HEADER
+===================================================== */
+
+.custom-thank-you-title {
+
+    text-align: center;
+
+    margin-bottom: 50px;
+}
+
+.custom-thank-you-title h1 {
+
+    font-size: 48px;
+
+    color: #214b4f;
+
+    margin-bottom: 18px;
+
+    font-family: "Adys", sans-serif;
+}
+
+.custom-thank-you-title p {
+
+    font-size: 18px;
+
+    color: #5f5f5f;
+
+    line-height: 1.8;
+
+    max-width: 700px;
+
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+
+    .custom-thank-you-title h1 {
+
+        font-size: 34px;
+    }
+
+    .custom-thank-you-title p {
+
+        font-size: 16px;
+    }
+}
+
+/* =====================================================
+   FIX CHECKOUT RADIOS / CHECKBOXES
+===================================================== */
+
+body.woocommerce-checkout input[type="radio"],
+body.woocommerce-checkout input[type="checkbox"] {
+
+    width: 18px !important;
+    height: 18px !important;
+
+    min-width: 18px !important;
+    min-height: 18px !important;
+
+    padding: 0 !important;
+
+    margin: 0 10px 0 0 !important;
+
+    box-shadow: none !important;
+
+    accent-color: #7bc47f;
+
+    transform: none !important;
+
+    position: relative !important;
+
+    top: 0 !important;
+
+    vertical-align: middle !important;
+
+    align-self: center !important;
+
+    flex-shrink: 0 !important;
+}
+
+/* Radios stay round */
+body.woocommerce-checkout input[type="radio"] {
+
+    border-radius: 50% !important;
+}
+
+/* Checkboxes stay square */
+body.woocommerce-checkout input[type="checkbox"] {
+
+    border-radius: 4px !important;
+}
+@media (max-width: 768px) {
+
+    body.woocommerce-checkout input[type="radio"],
+    body.woocommerce-checkout input[type="checkbox"] {
+
+        transform: translateY(3px) !important;
+    }
+
+}
+
+/* =====================================================
+   PERFECT VERTICAL ALIGNMENT
+===================================================== */
+
+.wc-block-components-checkbox,
+.wc-block-components-radio-control__option {
+
+    display: flex !important;
+
+    align-items: center !important;
+}
+
+/* Radio rows */
+.wc-block-components-radio-control__option {
+
+    gap: 10px !important;
+
+    padding: 16px 18px !important;
+}
+
+/* =====================================================
+   LABELS
+===================================================== */
+
+.wc-block-components-radio-control__label,
+.wc-block-components-payment-method-label {
+
+    font-size: 16px !important;
+
+    font-weight: 600 !important;
+
+    color: #214b4f !important;
+
+    line-height: 1.4 !important;
+}
+
+/* =====================================================
+   CHECKOUT MAX WIDTH
+===================================================== */
+
+body.woocommerce-checkout .site-content {
+
+    max-width: 1200px !important;
+}
+/* =====================================================
+   CHECKOUT FINAL REFINEMENT
+===================================================== */
+
+/* MAIN WIDTH */
+body.woocommerce-checkout .site-content {
+
+    max-width: 1200px !important;
+
+    width: 100%;
+
+    margin: 180px auto 80px !important;
+
+    padding: 40px !important;
+}
+
+/* MAIN CHECKOUT CARD */
+.wp-block-woocommerce-checkout {
+
+    background: #ffffff !important;
+
+    border-radius: 28px !important;
+
+    padding: 42px !important;
+
+    box-shadow:
+        0 12px 40px rgba(0,0,0,0.04) !important;
+}
+
+/* =====================================================
+   SECTION TITLES
+===================================================== */
+
+.wc-block-checkout__main h2,
+.wc-block-components-title {
+
+    font-size: 34px !important;
+
+    line-height: 1.25 !important;
+
+    font-weight: 700 !important;
+
+    color: #214b4f !important;
+
+    margin-bottom: 26px !important;
+
+    font-family: "Adys", sans-serif !important;
+}
+
+/* SMALL LABELS */
+body.woocommerce-checkout label {
+
+    font-size: 15px !important;
+
+    font-weight: 600 !important;
+
+    color: #5f4f4f !important;
+
+    margin-bottom: 8px !important;
+}
+
+/* =====================================================
+   INPUTS
+===================================================== */
+
+body.woocommerce-checkout input,
+body.woocommerce-checkout select,
+body.woocommerce-checkout textarea {
+
+    min-height: 58px !important;
+
+    padding: 14px 18px !important;
+
+    border-radius: 14px !important;
+
+    border: 2px solid #eadede !important;
+
+    background: #fffefe !important;
+
+    font-size: 16px !important;
+
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+body.woocommerce-checkout input:focus,
+body.woocommerce-checkout select:focus,
+body.woocommerce-checkout textarea:focus {
+
+    border-color: #7bc47f !important;
+
+    box-shadow:
+        0 0 0 4px rgba(123,196,127,0.12) !important;
+}
+
+/* =====================================================
+   SHIPPING + PAYMENT CARDS
+===================================================== */
+
+.wc-block-components-radio-control__option {
+
+    border: 2px solid #ece2e2 !important;
+
+    border-radius: 18px !important;
+
+    padding: 22px 24px !important;
+
+    margin-bottom: 14px !important;
+
+    background: #ffffff !important;
+
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        transform 0.25s ease;
+}
+
+/* HOVER */
+.wc-block-components-radio-control__option:hover {
+
+    border-color: #d7ebd9 !important;
+
+    box-shadow:
+        0 10px 26px rgba(123,196,127,0.10);
+
+    transform: translateY(-1px);
+}
+
+/* SELECTED */
+.wc-block-components-radio-control__option-checked {
+
+    border-color: #7bc47f !important;
+
+    background: #fcfffc !important;
+
+    box-shadow:
+        0 10px 26px rgba(123,196,127,0.12);
+}
+
+/* PAYMENT TITLES */
+.wc-block-components-radio-control__label,
+.wc-block-components-payment-method-label {
+
+    font-size: 18px !important;
+
+    font-weight: 700 !important;
+
+    color: #214b4f !important;
+}
+
+/* PAYMENT DESCRIPTIONS */
+.wc-block-components-radio-control__description,
+.wc-block-components-payment-method-description {
+
+    font-size: 15px !important;
+
+    line-height: 1.7 !important;
+
+    color: #6f6666 !important;
+
+    margin-top: 10px !important;
+}
+
+/* RADIO */
+.wc-block-components-radio-control__input {
+
+    transform: scale(1.15);
+}
+
+/* =====================================================
+   ORDER SUMMARY
+===================================================== */
+
+.wp-block-woocommerce-checkout-order-summary-block {
+
+    background: #fffaf0 !important;
+
+    border-radius: 22px !important;
+
+    padding: 34px !important;
+
+    border: 1px solid #f1e6d8 !important;
+}
+
+/* PRODUCT NAMES */
+.wc-block-components-product-name {
+
+    font-size: 18px !important;
+
+    line-height: 1.5 !important;
+
+    font-weight: 600 !important;
+
+    color: #214b4f !important;
+}
+
+/* TOTALS */
+.wc-block-components-totals-item__label {
+
+    font-size: 17px !important;
+
+    font-weight: 600 !important;
+}
+
+.wc-block-components-totals-item__value {
+
+    font-size: 18px !important;
+
+    font-weight: 700 !important;
+}
+
+/* GRAND TOTAL */
+.wc-block-components-totals-footer-item
+.wc-block-components-totals-item__value {
+
+    font-size: 28px !important;
+
+    color: #7bc47f !important;
+}
+
+/* =====================================================
+   PLACE ORDER BUTTON
+===================================================== */
+
+.wc-block-components-button {
+
+    min-height: 64px !important;
+
+    border-radius: 18px !important;
+
+    background: #7bc47f !important;
+
+    font-size: 20px !important;
+
+    font-weight: 700 !important;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+.wc-block-components-button:hover {
+
+    background: #6ab56e !important;
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 10px 24px rgba(123,196,127,0.24);
+}
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 768px) {
+
+    body.woocommerce-checkout .site-content {
+
+        padding: 16px !important;
+
+        margin-top: 140px !important;
+    }
+
+    .wp-block-woocommerce-checkout {
+
+        padding: 20px !important;
+
+        border-radius: 20px !important;
+    }
+
+    .wc-block-checkout__main h2,
+    .wc-block-components-title {
+
+        font-size: 28px !important;
+    }
+
+    .wc-block-components-radio-control__option {
+
+        padding: 18px !important;
+    }
+
+    .wc-block-components-button {
+
+        min-height: 58px !important;
+
+        font-size: 18px !important;
+    }
+}
+
+/* =====================================================
+   INPUT TEXT VERTICAL ALIGNMENT
+===================================================== */
+
+body.woocommerce-checkout input,
+body.woocommerce-checkout select,
+body.woocommerce-checkout textarea {
+
+    padding-top: 24px !important;
+    padding-bottom: 6px !important;
+
+    line-height: 1.4 !important;
+}
+
+/* Select fields specifically */
+body.woocommerce-checkout select {
+
+    min-height: 58px !important;
+}
+
+/* Placeholder alignment */
+body.woocommerce-checkout input::placeholder,
+body.woocommerce-checkout textarea::placeholder {
+
+    line-height: 1.4 !important;
+}
+
+/* FINAL CHECKOUT 1200PX HARD LIMIT */
+body.woocommerce-checkout .site-content,
+body.woocommerce-checkout .wp-block-woocommerce-checkout,
+body.woocommerce-checkout .wc-block-checkout {
+    max-width: 1200px !important;
+    width: 100% !important;
+    margin-top: 50px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    box-sizing: border-box !important;
+}
+
+/* Редактиране */
+.wc-block-components-address-card__edit {
+
+    font-size: 16px !important;
+
+    font-weight: 700 !important;
+
+    color: #214b4f !important;
+}
+
+/* SHIPPING / PAYMENT LABEL PERFECT ALIGN */
+.wc-block-components-radio-control__option {
+
+    display: flex !important;
+
+    align-items: center !important;
+}
+
+/* radio */
+.wc-block-components-radio-control__input {
+
+    margin: 0 10px 0 0 !important;
+
+    transform: none !important;
+
+    position: relative !important;
+
+    top: 0 !important;
+
+    flex-shrink: 0 !important;
+}
+
+/* text */
+.wc-block-components-radio-control__label {
+
+    display: flex !important;
+
+    align-items: center !important;
+
+    min-height: 18px !important;
+
+    line-height: 1 !important;
+
+    margin: 0 !important;
+}
+
+/* =====================================================
+   REMOVE SHIPPING FROM CART PAGE COMPLETELY
+===================================================== */
+
+/* shipping row */
+body.woocommerce-cart .wc-block-components-totals-shipping,
+body.woocommerce-cart .wc-block-cart__totals-shipping,
+body.woocommerce-cart .wc-block-components-totals-shipping__change-address,
+body.woocommerce-cart .wc-block-components-shipping-rates-control,
+body.woocommerce-cart .wc-block-components-totals-shipping__fieldset,
+body.woocommerce-cart .wc-block-components-totals-shipping__calculator {
+
+    display: none !important;
+}
+
+/* remove spacing left behind */
+body.woocommerce-cart .wc-block-components-totals-wrapper {
+
+    gap: 0 !important;
+}
+
+/* REMOVE POSTCODE ASTERISK */
+label[for="shipping-postcode"]::after,
+label[for="billing-postcode"]::after {
+
+    display: none !important;
+
+    content: none !important;
+}
+
+/* Woo Blocks required mark */
+.wc-block-components-text-input.is-active label[for="shipping-postcode"] span,
+.wc-block-components-text-input.is-active label[for="billing-postcode"] span {
+
+    display: none !important;
+}
+
+/* Hide empty/temporary BGN conversions */
+.bgn-price-checkout {
+    min-height: 18px;
+}
+
+.bgn-price-checkout:empty {
+    display: none !important;
+}
+/* HIDE ADDRESS LINE 2 TOGGLE */
+.wc-block-components-address-form__address_2-toggle,
+.wc-block-components-address-form__address_2-toggle-wrapper,
+button[aria-label*="apartment"],
+button[aria-label*="suite"],
+button[aria-label*="unit"] {
+    display: none !important;
+}
+
+/* TERMS LINKS */
+
+.wc-block-checkout__terms a,
+.wc-block-components-checkout-step__content a,
+.wc-block-components-checkbox a {
+
+    color: #214b4f !important;
+
+    text-decoration: underline !important;
+
+    font-weight: 600;
+}
+
+.wc-block-checkout__terms a:hover,
+.wc-block-components-checkout-step__content a:hover,
+.wc-block-components-checkbox a:hover {
+
+    color: #7bc47f !important;
+}
+
+/* =========================================
+   MOBILE CHECKBOX / RADIO FIX
+========================================= */
+
+@media (max-width: 768px) {
+
+    .woocommerce form .form-row label,
+    .woocommerce-checkout label {
+
+        display: flex !important;
+        align-items: center !important;
+        gap: 10px !important;
+    }
+
+    .woocommerce form .form-row input[type="checkbox"],
+    .woocommerce form .form-row input[type="radio"] {
+
+        appearance: auto !important;
+        -webkit-appearance: auto !important;
+
+        position: relative !important;
+
+        width: 16px !important;
+        height: 16px !important;
+
+        min-width: 16px !important;
+        min-height: 16px !important;
+
+        margin: 0 !important;
+
+        top: auto !important;
+        transform: none !important;
+
+        flex-shrink: 0 !important;
+
+        display: inline-block !important;
+        vertical-align: middle !important;
+    }
+
+}
+

@@ -1,0 +1,589 @@
+/* =====================================================
+GLOBAL WRAPPER
+===================================================== */
+
+.atelier-wrapper {
+    max-width: 2560px;
+    margin: 0 auto;
+    padding: 120px 20px;
+}
+
+/* =====================================================
+ABOUT
+===================================================== */
+
+.atelier-about-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.atelier-about-text h2 {
+    font-size: 42px;
+    color: #214b4f;
+    margin-bottom: 30px;
+}
+
+.atelier-about-text h2 {
+
+    display: inline-block;
+
+}
+
+.atelier-about-text h2::after {
+
+    content: "";
+
+    display: block;
+
+    width: 80px;
+    height: 6px;
+
+    margin: 20px auto 0;
+
+    background:
+        linear-gradient(#214b4f, #214b4f) top center / 60px 2px no-repeat,
+        linear-gradient(#214b4f, #214b4f) bottom center / 30px 2px no-repeat;
+
+}
+
+.atelier-about-text p {
+    font-size: 22px;
+    line-height: 1.9;
+    margin-bottom: 24px;
+    color: #444;
+}
+
+.atelier-about-image img,
+.atelier-parents-image img {
+
+    width: 100%;
+    height: 520px;
+
+    object-fit: cover;
+
+    border-radius: 24px;
+
+    box-shadow: 0 40px 100px rgba(0, 0, 0, 0.15);
+
+    transition: transform .25s cubic-bezier(.22, 1, .36, 1);
+
+}
+
+.atelier-about-image:hover img,
+.atelier-parents-image:hover img {
+
+    transform: scale(1.03);
+
+}
+
+/* =====================================================
+   ATELIER SLIDER
+===================================================== */
+
+.atelier-about-slider {
+
+    position: relative;
+
+    width: 100%;
+    height: 520px;
+
+    overflow: hidden;
+
+    border-radius: 24px;
+
+    box-shadow:
+        0 40px 100px rgba(0, 0, 0, 0.15);
+}
+
+/* TRACK */
+
+.atelier-about-track {
+
+    display: flex;
+
+    width: 100%;
+    height: 100%;
+
+    transition:
+        transform 0.8s cubic-bezier(.22, 1, .36, 1);
+}
+
+/* SLIDES */
+
+.atelier-about-slide {
+
+    min-width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    flex-shrink: 0;
+
+    transition:
+        transform .25s cubic-bezier(.22, 1, .36, 1);
+}
+
+/* HOVER ZOOM */
+
+.atelier-about-slider:hover .atelier-about-slide {
+    transform: scale(1.03);
+}
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+
+.atelier-slider-btn {
+
+    position: absolute;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 54px;
+    height: 54px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.28);
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    color: #ffffff;
+
+    font-size: 38px;
+    line-height: 1;
+
+    cursor: pointer;
+
+    z-index: 20;
+
+    transition:
+        background .25s ease,
+        transform .25s ease;
+}
+
+.atelier-slider-btn:hover {
+
+    background: rgba(255, 255, 255, 0.42);
+
+    transform:
+        translateY(-50%) scale(1.06);
+}
+
+.atelier-prev {
+    left: 20px;
+}
+
+.atelier-next {
+    right: 20px;
+}
+
+/* =====================================================
+   PARENTS SLIDER
+===================================================== */
+
+.atelier-parents-slider {
+
+    position: relative;
+
+    width: 100%;
+    height: 520px;
+
+    overflow: hidden;
+
+    border-radius: 24px;
+
+    box-shadow:
+        0 40px 100px rgba(0, 0, 0, 0.15);
+}
+
+/* TRACK */
+
+.atelier-parents-track {
+
+    display: flex;
+
+    width: 100%;
+    height: 100%;
+
+    transition:
+        transform 0.8s cubic-bezier(.22, 1, .36, 1);
+}
+
+/* SLIDES */
+
+.atelier-parents-slide {
+
+    min-width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    flex-shrink: 0;
+
+    transition:
+        transform .25s cubic-bezier(.22, 1, .36, 1);
+}
+
+/* HOVER */
+
+.atelier-parents-slider:hover .atelier-parents-slide {
+    transform: scale(1.03);
+}
+
+/* BUTTONS */
+
+.atelier-parents-prev {
+    left: 20px;
+}
+
+.atelier-parents-next {
+    right: 20px;
+}
+
+/* =====================================================
+SECTION TITLE
+===================================================== */
+
+.atelier-section-title {
+
+    text-align: center;
+
+    font-size: 46px;
+    color: #214b4f;
+
+    margin-bottom: 70px;
+
+    position: relative;
+
+}
+
+.atelier-section-title::after {
+
+    content: "";
+
+    display: block;
+
+    width: 80px;
+    height: 6px;
+
+    margin: 20px auto 0;
+
+    background:
+        linear-gradient(#214b4f, #214b4f) top center / 60px 2px no-repeat,
+        linear-gradient(#214b4f, #214b4f) bottom center / 30px 2px no-repeat;
+
+}
+
+/* =====================================================
+CARDS
+===================================================== */
+
+.atelier-experience-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+/* =====================================================
+ATELIER CARDS
+===================================================== */
+
+.atelier-card {
+
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+
+    text-align: center;
+
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+
+    transform: translateY(30px) scale(.96);
+    opacity: 0;
+
+    transition:
+        transform .25s cubic-bezier(.22, 1, .36, 1),
+        box-shadow .25s ease,
+        opacity .25s ease;
+
+}
+
+/* SCROLL REVEAL */
+
+.atelier-card.in-view {
+
+
+    transform: translateY(0) scale(1);
+    opacity: 1;
+
+}
+
+/* HOVER POP (IMPORTANT: higher specificity) */
+
+.atelier-experience-grid .atelier-card:hover,
+.atelier-benefits-grid .atelier-benefit:hover {
+
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 30px 70px rgba(0, 0, 0, 0.14);
+
+}
+
+
+/* =====================================================
+BENEFITS
+===================================================== */
+
+.atelier-benefits {
+    background: #f7e6e6;
+}
+
+.atelier-benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    max-width: 2560px;
+    margin: 0 auto;
+}
+
+.atelier-benefit {
+
+    background: white;
+    padding: 26px;
+    border-radius: 16px;
+
+    text-align: center;
+
+    font-size: 20px;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+
+}
+
+.atelier-benefit:hover {
+
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 30px 70px rgba(0, 0, 0, 0.14);
+
+}
+
+/* =====================================================
+PARENTS
+===================================================== */
+
+.atelier-parents-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.atelier-parents-image img {
+    width: 100%;
+    height: 520px;
+    object-fit: cover;
+    border-radius: 24px;
+}
+
+.atelier-parents-text h2 {
+    font-size: 40px;
+    margin-bottom: 24px;
+    color: #214b4f;
+    display: inline-block;
+}
+
+.atelier-parents-text h2::after {
+
+    content: "";
+
+    display: block;
+
+    width: 80px;
+    height: 6px;
+
+    margin: 20px auto 0;
+
+    background:
+        linear-gradient(#214b4f, #214b4f) top center / 60px 2px no-repeat,
+        linear-gradient(#214b4f, #214b4f) bottom center / 30px 2px no-repeat;
+
+}
+
+.atelier-parents-text p {
+    font-size: 22px;
+    line-height: 1.9;
+    margin-bottom: 20px;
+}
+
+/* =====================================================
+CTA
+===================================================== */
+
+.atelier-cta {
+    background: #fddca3;
+    text-align: center;
+    padding: 80px 20px;
+    color: #2f5e62;
+}
+
+.atelier-cta-inner {
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.atelier-cta h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.atelier-cta p {
+    font-size: 22px;
+    line-height: 1.9;
+    margin-bottom: 32px;
+}
+
+.atelier-cta-inner h2::after {
+
+    content: "";
+
+    display: block;
+
+    width: 80px;
+    height: 6px;
+
+    margin: 18px auto 0;
+
+    background:
+        linear-gradient(#2f5e62, #2f5e62) top center / 60px 2px no-repeat,
+        linear-gradient(#2f5e62, #2f5e62) bottom center / 30px 2px no-repeat;
+}
+
+/* =====================================================
+RESPONSIVE
+===================================================== */
+
+@media (max-width:992px) {
+
+    .atelier-about-grid,
+    .atelier-parents-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .atelier-experience-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .atelier-benefits-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .atelier-about-text {
+        text-align: center;
+    }
+
+    .atelier-about-text h2::after {
+        margin: 20px auto 0;
+    }
+
+    .atelier-parents-text {
+        text-align: center;
+    }
+
+}
+
+/* =====================================================
+REVEAL SYSTEM
+===================================================== */
+
+.reveal-up,
+.reveal-left,
+.reveal-right {
+    opacity: 0;
+
+    transition:
+        opacity .4s cubic-bezier(0.22, 1, 0.36, 1),
+        transform .4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* directions */
+
+.reveal-up {
+    transform: translate3d(0, 60px, 0) scale(0.94);
+}
+
+.reveal-left {
+    transform: translate3d(-60px, 0, 0) scale(0.94);
+}
+
+.reveal-right {
+    transform: translate3d(60px, 0, 0) scale(0.94);
+}
+
+/* when visible */
+
+.reveal-up.in-view,
+.reveal-left.in-view,
+.reveal-right.in-view {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+}
+
+.atelier-about-text h2,
+.atelier-parents-text h2,
+.atelier-section-title,
+.atelier-card h3 {
+
+    font-weight: 500;
+
+}
+
+
+@media (max-width: 425px) {
+
+    .atelier-about-slider,
+    .atelier-parents-slider {
+
+        height: auto !important;
+
+        overflow: hidden;
+
+    }
+
+    .atelier-about-track,
+    .atelier-parents-track {
+
+        height: auto !important;
+
+        align-items: center;
+
+    }
+
+    .atelier-about-slide,
+    .atelier-parents-slide {
+
+        width: 100%;
+
+        height: auto !important;
+
+        max-height: none !important;
+
+        object-fit: contain !important;
+
+        display: block;
+
+    }
+
+}

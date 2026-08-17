@@ -1,0 +1,1362 @@
+/* =====================================================
+   PRODUKTI PAGE
+===================================================== */
+
+.produkti-page {
+    background: linear-gradient(180deg, #f7eded 0%, #f6e9e9 36%, #ffffff 100%);
+    overflow-x: hidden;
+}
+
+
+/* =====================================================
+   SHELL
+===================================================== */
+
+.produkti-shell {
+    width: 100%;
+    max-width: none;
+    /* 🔥 removes container limit */
+    margin: 0;
+    padding: 0 0;
+    /* keep breathing space */
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.produkti-hero {
+    position: relative;
+
+    min-height: 100vh;
+    max-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 150px 20px 120px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(rgba(255, 248, 244, 0.10),
+            rgba(255, 248, 244, 0.08)),
+        url('../img/products-hero.jpg') center center / cover no-repeat;
+}
+
+.produkti-hero-overlay {
+    position: absolute;
+    inset: 0;
+
+    z-index: 1;
+}
+
+.produkti-hero-inner {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    max-width: 920px;
+
+    margin: 0 auto;
+
+    padding: 55px 40px;
+
+    border-radius: 34px;
+
+    background: rgba(255, 255, 255, 0.34);
+
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+
+    border: 1px solid rgba(255, 255, 255, 0.28);
+
+    box-shadow:
+        0 35px 100px rgba(0, 0, 0, 0.22);
+}
+
+.produkti-title {
+    margin: 0;
+
+    font-size: clamp(46px, 5vw, 64px);
+    font-weight: 500;
+    line-height: 1.1;
+
+    color: #1a4144;
+
+    display: inline-block;
+}
+
+/* =====================================================
+   DOUBLE LINES (UNIFIED)
+===================================================== */
+
+.produkti-title::after {
+
+    content: "";
+
+    display: block;
+
+    width: 80px;
+    height: 6px;
+
+    margin: 20px auto 0;
+
+    background:
+        linear-gradient(#1a4144, #1a4144) top center / 60px 2px no-repeat,
+        linear-gradient(#1a4144, #1a4144) bottom center / 30px 2px no-repeat;
+}
+
+/* old decoration no longer needed */
+.title-decoration {
+    display: none;
+}
+
+.produkti-subtitle {
+    max-width: 900px;
+
+    margin: 38px auto 0;
+
+    font-size: 24px;
+    line-height: 1.9;
+
+    color: #1a4144;
+
+    text-shadow:
+        0 1px 2px rgba(255, 255, 255, 0.25);
+}
+
+/* =====================================================
+   PRODUCTS SECTION
+===================================================== */
+
+.produkti-listing-section {
+    position: relative;
+    padding: 160px 0 205px;
+}
+
+.produkti-listing-section::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 60px;
+    transform: translateX(-50%);
+    width: 100vw;
+    height: calc(100% - 160px);
+    background: #fddca3;
+    box-shadow:
+        inset 0 18px 35px rgba(0, 0, 0, 0.06),
+        inset 0 -18px 35px rgba(0, 0, 0, 0.06),
+        inset 0 1px 0 rgba(255, 255, 255, 0.6),
+        inset 0 -1px 0 rgba(255, 255, 255, 0.6);
+    z-index: 0;
+}
+
+.produkti-listing-section>.produkti-shell {
+    position: relative;
+    z-index: 1;
+}
+
+.produkti-section-head {
+    max-width: 980px;
+    margin: 0 auto 110px;
+    text-align: center;
+}
+
+.produkti-section-title {
+    margin: 0;
+
+    font-size: 56px;
+    font-weight: 500;
+    line-height: 1.2;
+
+    color: #1a4144;
+
+    display: inline-block;
+}
+
+/* =====================================================
+   DOUBLE LINES
+===================================================== */
+
+.produkti-section-title::after {
+
+    content: "";
+
+    display: block;
+
+    width: 80px;
+    height: 6px;
+
+    margin: 20px auto 0;
+
+    background:
+        linear-gradient(#1a4144, #1a4144) top center / 60px 2px no-repeat,
+        linear-gradient(#1a4144, #1a4144) bottom center / 30px 2px no-repeat;
+}
+
+.produkti-section-text {
+    max-width: 940px;
+
+    margin: 38px auto 0;
+
+    font-size: 24px;
+    line-height: 1.9;
+
+    color: #4d4747;
+}
+
+@media (max-width: 425px) {
+
+    .produkti-hero-inner {
+
+        width: calc(100% - 12px) !important;
+
+        padding: 28px 18px !important;
+
+        border-radius: 22px;
+    }
+
+    .produkti-subtitle {
+
+        max-width: 100% !important;
+
+        margin-top: 26px;
+
+        line-height: 1.75;
+    }
+
+}
+/* =====================================================
+   LEGACY GRID / CARD
+   (kept safe in case old markup still appears somewhere)
+===================================================== */
+
+.produkti-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 34px;
+}
+
+.produkti-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    padding: 26px 24px 28px;
+    border-radius: 34px;
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.985), rgba(255, 255, 255, 0.93));
+    box-shadow:
+        0 18px 42px rgba(0, 0, 0, 0.06),
+        0 48px 110px rgba(0, 0, 0, 0.045),
+        inset 0 2px 6px rgba(255, 255, 255, 0.78);
+    overflow: visible;
+    transition:
+        transform 0.15s cubic-bezier(0.22, 1, 0.36, 1),
+        box-shadow 0.15s ease;
+}
+
+.produkti-card:hover {
+    transform: translateY(-10px);
+    box-shadow:
+        0 28px 62px rgba(0, 0, 0, 0.11),
+        0 56px 125px rgba(0, 0, 0, 0.08),
+        inset 0 2px 6px rgba(255, 255, 255, 0.82);
+}
+
+/* =====================================================
+   CARD MEDIA
+===================================================== */
+
+.produkti-card-media {
+
+    position: relative;
+
+    width: 100%;
+    height: 270px;
+
+    overflow: hidden;
+
+    border-radius: 26px;
+
+    display: block;
+
+    margin-bottom: 22px;
+}
+
+
+.produkti-card-glow {
+    position: absolute;
+    inset: 24px;
+    border-radius: 26px;
+    background: radial-gradient(circle at center,
+            rgba(244, 191, 191, 0.58) 0%,
+            rgba(255, 189, 89, 0.25) 48%,
+            rgba(255, 255, 255, 0) 76%);
+    filter: blur(22px);
+    transform: scale(1.08);
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* =====================================================
+   CARD IMAGE
+===================================================== */
+
+.produkti-card-image {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center center;
+
+    display: block;
+
+    transition: transform 0.25s ease;
+}
+
+.produkti-card:hover .produkti-card-image {
+    transform: scale(1.03);
+}
+
+.produkti-card-content {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.produkti-card-title {
+    margin: 0 0 12px;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 1.3;
+    color: #214b4f;
+}
+
+.produkti-card-title a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.produkti-card-title a:hover {
+    color: #17383c;
+}
+
+.produkti-card-text {
+    margin: 0 0 16px;
+    font-size: 20px;
+    line-height: 1.8;
+    color: #5a5454;
+}
+
+.produkti-card-price {
+    margin: 0 0 22px;
+    font-size: 24px;
+    font-weight: 500;
+    color: #3c2f2f;
+}
+
+.produkti-card-price ins {
+    text-decoration: none;
+}
+
+.produkti-card-price del {
+    opacity: 0.6;
+    margin-right: 8px;
+}
+
+.produkti-card-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-top: auto;
+}
+
+
+
+/* =====================================================
+   PRODUKTI BUTTONS — FINAL FIX (MATCH SERVICES 1:1)
+===================================================== */
+
+.produkti-btn,
+.produkti-row-actions .button,
+.produkti-row-actions .add_to_cart_button,
+.produkti-card-actions .button,
+.produkti-card-actions .add_to_cart_button {
+
+    min-width: 180px;
+    padding: 16px 32px;
+
+    border-radius: 999px;
+
+    background: var(--brand-gold);
+    color: #ffffff !important;
+
+    text-decoration: none;
+
+    font-weight: 600 !important;
+    /* 🔥 FORCE FIX */
+    font-size: 18px;
+
+    text-align: center;
+
+    border: none;
+
+    transition:
+        transform 0.45s ease,
+        box-shadow 0.45s ease,
+        background 0.45s ease;
+}
+
+/* HOVER */
+
+.produkti-btn:hover,
+.produkti-row-actions .button:hover,
+.produkti-row-actions .add_to_cart_button:hover,
+.produkti-card-actions .button:hover,
+.produkti-card-actions .add_to_cart_button:hover {
+
+    background: var(--gold-dark);
+    transform: translateY(-1px);
+
+    box-shadow: 0 10px 24px rgba(255, 189, 89, 0.35);
+}
+
+
+/* =====================================================
+   SECONDARY BUTTON — FIXED COLOR + FONT
+===================================================== */
+
+.produkti-btn-secondary {
+
+    background: rgba(0, 151, 178, 0.15) !important;
+    color: var(--brand-teal) !important;
+    /* 🔥 FIX */
+
+    font-weight: 600 !important;
+}
+
+/* HOVER */
+
+.produkti-btn-secondary:hover {
+
+    background: rgba(0, 151, 178, 0.25) !important;
+    color: var(--brand-teal) !important;
+
+    box-shadow: 0 8px 18px rgba(192, 106, 77, 0.18);
+}
+
+/* =====================================================
+   EMPTY
+===================================================== */
+
+.produkti-empty {
+    max-width: 760px;
+    margin: 20px auto 0;
+    padding: 34px 28px;
+    text-align: center;
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.82);
+    box-shadow: 0 18px 42px rgba(0, 0, 0, 0.05);
+}
+
+.produkti-empty p {
+    margin: 0;
+    font-size: 20px;
+    color: #575252;
+}
+
+
+/* =====================================================
+   INFO
+===================================================== */
+
+.produkti-info-section {
+    position: relative;
+    padding: 140px 0;
+    background:
+        linear-gradient(180deg, #ffffff 0%, #fcf6f6 52%, #f7efef 100%);
+    overflow: hidden;
+}
+
+.produkti-info-box {
+    position: relative;
+    max-width: 2560px;
+    margin: 0 auto;
+
+    padding: 90px 80px;
+
+    border-radius: 42px;
+
+    background:
+        linear-gradient(180deg,
+            rgba(255, 255, 255, 0.96) 0%,
+            rgba(255, 250, 250, 0.98) 100%);
+
+    border: 1px solid rgba(47, 94, 98, 0.08);
+
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.05),
+        0 60px 140px rgba(47, 94, 98, 0.08);
+
+    overflow: hidden;
+    text-align: center;
+}
+
+/* Soft Glow */
+.produkti-info-box::before {
+    content: "";
+
+    position: absolute;
+    top: -120px;
+    right: -120px;
+
+    width: 320px;
+    height: 320px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(circle,
+            rgba(244, 184, 90, 0.14) 0%,
+            rgba(244, 184, 90, 0) 72%);
+}
+
+.produkti-info-title {
+    margin: 0 auto;
+    text-align: center;
+
+    font-size: clamp(40px, 4vw, 58px);
+    font-weight: 500;
+    line-height: 1.1;
+
+    color: #214b4f;
+
+    letter-spacing: -0.02em;
+}
+
+.produkti-info-intro {
+    max-width: 1200px;
+
+    margin:
+        34px auto 0;
+
+    font-size: 22px;
+    line-height: 1.9;
+
+    color: #4f4949;
+}
+
+/* =====================================================
+   GRID
+===================================================== */
+
+.produkti-info-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 28px;
+
+    margin-top: 70px;
+}
+
+.produkti-info-card {
+    position: relative;
+
+    padding: 42px 34px;
+
+    text-align: left;
+
+    border-radius: 28px;
+
+    background:
+        linear-gradient(180deg,
+            rgba(255, 255, 255, 0.96) 0%,
+            rgba(250, 246, 246, 0.96) 100%);
+
+    border: 1px solid rgba(47, 94, 98, 0.08);
+
+    box-shadow:
+        0 14px 34px rgba(0, 0, 0, 0.04);
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease;
+}
+
+.produkti-info-card:hover {
+    transform: translateY(-6px);
+
+    border-color: rgba(244, 184, 90, 0.24);
+
+    box-shadow:
+        0 20px 44px rgba(47, 94, 98, 0.10);
+}
+
+.produkti-info-card h3 {
+    margin: 0 0 24px;
+
+    font-size: 28px;
+    font-weight: 600;
+
+    color: #214b4f;
+}
+
+.produkti-info-card ul {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.produkti-info-card ul li {
+    position: relative;
+
+    padding-left: 26px;
+    margin-bottom: 18px;
+
+    font-size: 18px;
+    line-height: 1.7;
+
+    color: #4f4949;
+}
+
+.produkti-info-card ul li:last-child {
+    margin-bottom: 0;
+}
+
+/* Custom Bullet */
+
+.produkti-info-card ul li::before {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    top: 12px;
+
+    width: 9px;
+    height: 9px;
+
+    border-radius: 50%;
+
+    background: #f4b85a;
+
+    box-shadow:
+        0 0 0 6px rgba(244, 184, 90, 0.12);
+}
+
+/* =====================================================
+   FOOTER TEXT
+===================================================== */
+
+.produkti-info-footer {
+    max-width: 1100px;
+
+    margin:
+        60px auto 0;
+
+    font-size: 22px;
+    line-height: 1.9;
+
+    color: #4f4949;
+}
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 1100px) {
+
+    .produkti-info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .produkti-info-box {
+        padding: 70px 34px;
+    }
+
+    .produkti-info-card {
+        padding: 34px 28px;
+    }
+
+    .produkti-info-card h3 {
+        font-size: 24px;
+    }
+
+    .produkti-info-intro,
+    .produkti-info-footer {
+        font-size: 19px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .produkti-info-section {
+        padding: 90px 0;
+    }
+
+    .produkti-info-box {
+        border-radius: 28px;
+        padding: 54px 22px;
+    }
+
+    .produkti-info-title {
+        font-size: 36px;
+    }
+
+    .produkti-info-intro,
+    .produkti-info-footer {
+        font-size: 17px;
+        line-height: 1.8;
+    }
+
+    .produkti-info-grid {
+        margin-top: 46px;
+        gap: 22px;
+    }
+
+    .produkti-info-card {
+        border-radius: 22px;
+        padding: 28px 22px;
+    }
+
+    .produkti-info-card h3 {
+        font-size: 22px;
+    }
+
+    .produkti-info-card ul li {
+        font-size: 16px;
+    }
+}
+
+/* =====================================================
+   CTA
+===================================================== */
+
+.produkti-cta-section {
+    padding: 0 0 130px;
+}
+
+.produkti-cta-box {
+    max-width: 2560px;
+    margin: 0 auto;
+    padding: 66px 60px;
+    text-align: center;
+    border-radius: 34px;
+    background: linear-gradient(135deg, #214b4f 0%, #2f5e62 100%);
+    box-shadow: 0 28px 70px rgba(33, 75, 79, 0.22);
+}
+
+.produkti-cta-box h2 {
+    margin: 0 0 18px;
+    font-size: clamp(36px, 4vw, 48px);
+    font-weight: 500;
+    line-height: 1.15;
+    color: #ffffff;
+}
+
+.produkti-cta-box p {
+    max-width: 2560px;
+    margin: 0 auto 30px;
+    font-size: 22px;
+    line-height: 1.9;
+    color: rgba(255, 255, 255, 0.92);
+}
+
+
+/* =====================================================
+   WOOCOMMERCE PRICE SAFETY
+===================================================== */
+
+.produkti-card-price .woocommerce-Price-amount,
+.produkti-row-price .woocommerce-Price-amount {
+    color: inherit;
+}
+
+.produkti-card-price .woocommerce-Price-currencySymbol,
+.produkti-row-price .woocommerce-Price-currencySymbol {
+    font-size: 0.95em;
+}
+
+
+/* =====================================================
+   PRODUCT ROWS
+===================================================== */
+
+.produkti-rows {
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+}
+
+
+/* =====================================================
+   PRODUCT ROW
+===================================================== */
+
+.produkti-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+
+    gap: 60px;
+    padding: 60px 54px;
+
+    border-radius: 40px;
+
+    background: linear-gradient(145deg,
+            rgba(255, 255, 255, 0.98),
+            rgba(255, 255, 255, 0.9));
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.06),
+        0 40px 90px rgba(0, 0, 0, 0.04);
+
+    position: relative;
+    z-index: 1;
+
+    overflow: visible;
+    /* 🔥 CRITICAL */
+
+    transition:
+        transform 0.25s ease-out,
+        box-shadow 0.25s ease-out;
+
+
+    will-change: transform;
+    transform: translateZ(0);
+}
+
+.produkti-row:hover {
+    transform: translateY(-4px) scale(1.01) !important;
+    box-shadow:
+        0 22px 55px rgba(0, 0, 0, 0.14),
+        0 40px 90px rgba(0, 0, 0, 0.10);
+
+    z-index: 5;
+}
+
+.produkti-row-reverse {
+    grid-template-columns: 1.2fr 1.1fr;
+}
+
+.produkti-row-reverse .produkti-row-media {
+    order: 2;
+}
+
+.produkti-listing-section::before {
+    z-index: 0;
+}
+
+.produkti-shell {
+    position: relative;
+    z-index: 2;
+}
+
+/* =====================================================
+   IMAGE
+===================================================== */
+
+.produkti-row-media {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+
+    isolation: isolate;
+
+    overflow: hidden;
+    /* 🔥 CRITICAL FIX */
+    border-radius: 30px;
+    /* 🔥 MATCH IMAGE */
+}
+
+.produkti-row-media::before {
+    content: "";
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    background: radial-gradient(circle,
+            rgba(244, 191, 191, 0.55),
+            rgba(255, 189, 89, 0.25),
+            transparent 70%);
+    filter: blur(40px);
+    z-index: 0;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+    opacity: 0.95;
+}
+
+.produkti-row:hover .produkti-row-media::before {
+    transform: scale(1.08);
+    opacity: 1;
+}
+
+.produkti-row-image {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    height: 420px;
+
+    object-fit: contain;
+    object-position: center center;
+
+    background: #fffaf5;
+
+    border-radius: 0;
+
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+
+    transition: transform 0.6s ease, box-shadow 0.6s ease;
+}
+
+.produkti-row:hover .produkti-row-image {
+    transform: scale(1.08);
+    box-shadow: 0 28px 70px rgba(0, 0, 0, 0.18);
+}
+
+
+/* =====================================================
+   CONTENT
+===================================================== */
+
+.produkti-row-content {
+    max-width: 760px;
+}
+
+.produkti-row-title {
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 1.25;
+    margin: 0 0 20px;
+    color: #214b4f;
+}
+
+.produkti-row-title a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.produkti-row-title a:hover {
+    color: #17383c;
+}
+
+.produkti-row-text {
+    font-size: 23px;
+    line-height: 1.95;
+    color: #5a5454;
+    margin: 0 0 28px;
+}
+
+.produkti-row-price {
+    font-size: 28px;
+    font-weight: 500;
+    color: #3c2f2f;
+    margin: 0 0 30px;
+}
+
+/* =====================================================
+   PRODUKTI PRICE COLORS — MATCH SINGLE PRODUCT
+===================================================== */
+
+/* NEW PRICE (green) */
+
+.produkti-card-price ins,
+.produkti-card-price ins .woocommerce-Price-amount,
+.produkti-row-price ins,
+.produkti-row-price ins .woocommerce-Price-amount {
+
+    color: #7bc47f !important;
+    /* pastel green */
+    font-weight: 700;
+
+    text-decoration: none !important;
+    /* remove underline */
+}
+
+/* OLD PRICE (red) */
+
+.produkti-card-price del,
+.produkti-card-price del .woocommerce-Price-amount,
+.produkti-row-price del,
+.produkti-row-price del .woocommerce-Price-amount {
+
+    color: #e28b8b !important;
+    /* pastel red */
+    opacity: 1 !important;
+
+    text-decoration: line-through;
+}
+
+/* spacing */
+
+.produkti-card-price del,
+.produkti-row-price del {
+    margin-right: 10px;
+}
+
+.produkti-card-price ins,
+.produkti-row-price ins {
+    font-size: 1.15em;
+}
+
+/* =====================================================
+   BUTTONS IN ROWS
+===================================================== */
+
+.produkti-row-actions {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.produkti-row-actions .produkti-btn-primary,
+.produkti-row-actions .add_to_cart_button,
+.produkti-row-actions .button {
+    padding: 16px 32px;
+    border-radius: 999px;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.produkti-row-actions .produkti-btn-secondary {
+    padding: 16px 32px;
+    border-radius: 999px;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+
+/* =====================================================
+   ANIMATIONS
+===================================================== */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(60px);
+    transition: opacity 0.9s ease, transform 0.9s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.hover-pop {
+    transition: transform 0.45s ease, box-shadow 0.45s ease;
+}
+
+.hover-pop:hover {
+    transform: translateY(-8px) scale(1.04);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.18);
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 1280px) {
+    .produkti-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 28px;
+    }
+
+    .produkti-shell {
+        padding: 0 28px;
+    }
+
+    .produkti-row {
+        gap: 56px;
+        padding: 48px 42px;
+    }
+
+    .produkti-row-image {
+        min-height: 380px;
+    }
+}
+
+@media (max-width: 1100px) {
+    .produkti-row {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        padding: 40px 34px;
+    }
+
+    .produkti-row-reverse {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .produkti-row-image {
+        min-height: 320px;
+    }
+
+    .produkti-row-title {
+        font-size: 36px;
+    }
+
+    .produkti-row-text {
+        font-size: 20px;
+    }
+
+    .produkti-row-price {
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 992px) {
+    .produkti-hero {
+        min-height: 58vh;
+        padding: 130px 20px 100px;
+    }
+
+    .produkti-listing-section {
+        padding: 180px 0 110px;
+    }
+
+    .produkti-listing-section::before {
+        top: 102px;
+        height: calc(100% - 102px);
+    }
+
+    .produkti-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .produkti-info-box {
+        padding: 50px 34px;
+    }
+
+    .produkti-cta-box {
+        padding: 46px 30px;
+    }
+}
+
+@media (max-width: 900px) {
+    .produkti-row {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 40px;
+        padding: 40px 24px;
+    }
+
+    .produkti-row-reverse {
+        grid-template-columns: 1fr;
+    }
+
+    .produkti-row-reverse .produkti-row-media {
+        order: 0;
+    }
+
+    .produkti-row-content {
+        max-width: 100%;
+    }
+
+    .produkti-row-actions {
+        justify-content: center;
+    }
+
+    .produkti-row-title {
+        font-size: 32px;
+    }
+
+    .produkti-row-text {
+        font-size: 18px;
+    }
+
+    .produkti-row-price {
+        font-size: 24px;
+    }
+
+    .produkti-row-image {
+        min-height: auto;
+        height: auto;
+        max-height: 520px;
+    }
+}
+
+@media (max-width: 640px) {
+
+    .produkti-shell {
+        padding: 0 16px;
+    }
+
+    .produkti-hero {
+        min-height: 100vh;
+        padding: 120px 16px 88px;
+    }
+
+    /* HERO TYPOGRAPHY */
+
+    .produkti-title {
+        font-size: 40px;
+        line-height: 1.2;
+    }
+
+    .produkti-subtitle {
+        font-size: 20px;
+        line-height: 1.85;
+    }
+
+    /* SECTION */
+
+    .produkti-section-title {
+        font-size: 34px;
+        line-height: 1.2;
+    }
+
+    .produkti-section-text {
+        font-size: 20px;
+        line-height: 1.85;
+    }
+
+    .produkti-listing-section {
+        padding: 82px 0 150px;
+    }
+
+    .produkti-listing-section::before {
+        top: 0;
+        height: calc(100% - 88px);
+    }
+
+    .produkti-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    /* CARD */
+
+    .produkti-card {
+        padding: 22px 20px 24px;
+        border-radius: 26px;
+    }
+
+    .produkti-card-media {
+        min-height: 238px;
+        margin-bottom: 18px;
+    }
+
+    .produkti-card-title {
+        font-size: 24px;
+        line-height: 1.3;
+    }
+
+    .produkti-card-text {
+        font-size: 18px;
+        line-height: 1.75;
+    }
+
+    .produkti-card-price {
+        font-size: 20px;
+    }
+
+    /* INFO */
+
+    .produkti-info-section {
+        padding: 92px 0;
+    }
+
+    .produkti-info-box {
+        padding: 38px 22px;
+        border-radius: 26px;
+    }
+
+    .produkti-info-title {
+        font-size: 30px;
+    }
+
+    .produkti-info-box p {
+        font-size: 20px;
+        line-height: 1.85;
+    }
+
+    /* CTA */
+
+    .produkti-cta-section {
+        padding-bottom: 90px;
+    }
+
+    .produkti-cta-box {
+        padding: 34px 22px;
+        border-radius: 26px;
+    }
+
+    .produkti-cta-box h2 {
+        font-size: 30px;
+    }
+
+    .produkti-cta-box p {
+        font-size: 20px;
+        line-height: 1.85;
+    }
+
+    /* BUTTONS */
+
+    .produkti-btn {
+        width: 100%;
+    }
+
+    .produkti-card-actions,
+    .produkti-row-actions {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    /* PRODUCT ROW */
+
+    .produkti-row {
+        padding: 26px 20px;
+        border-radius: 26px;
+    }
+
+    .produkti-row-title {
+        font-size: 30px;
+        line-height: 1.25;
+    }
+
+    .produkti-row-text {
+        font-size: 20px;
+        line-height: 1.85;
+    }
+
+    .produkti-row-price {
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+
+    .produkti-row-image {
+        width: 100%;
+        height: 360px;
+        object-fit: contain;
+    }
+
+    .produkti-row-actions .produkti-btn,
+    .produkti-row-actions .produkti-btn-primary,
+    .produkti-row-actions .produkti-btn-secondary,
+    .produkti-row-actions .add_to_cart_button,
+    .produkti-row-actions .button {
+        width: 100%;
+    }
+}
+
+.no-courses-message {
+    text-align: center;
+    font-size: 22px;
+    color: #214b4f;
+    margin-top: 50px;
+    font-family: "Adys", sans-serif;
+    opacity: 0.9;
+}

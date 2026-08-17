@@ -1,0 +1,686 @@
+/* =====================================================
+   USLUGA 1 — SINGLE SERVICE PAGE
+===================================================== */
+
+.service-single-wrapper {
+    max-width: 2560px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+
+
+/* =====================================================
+   USLUGA HERO
+===================================================== */
+
+.usluga-hero {
+
+    position: relative;
+
+    min-height: 100vh;
+    max-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 140px 20px 120px;
+
+    text-align: center;
+
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+/* =====================================================
+   INDIVIDUAL HERO IMAGES
+===================================================== */
+
+.usluga-kids {
+
+    background:
+        linear-gradient(rgba(255, 248, 244, 0.10),
+            rgba(255, 248, 244, 0.08)),
+        url('../img/service-kids.jpg') center center / cover no-repeat;
+}
+
+.usluga-family {
+
+    background:
+        linear-gradient(rgba(255, 248, 244, 0.10),
+            rgba(255, 248, 244, 0.08)),
+        url('../img/service-family.jpg') center center / cover no-repeat;
+}
+
+.usluga-individual {
+
+    background:
+        linear-gradient(rgba(255, 248, 244, 0.10),
+            rgba(255, 248, 244, 0.08)),
+        url('../img/service-individual.jpg') center center / cover no-repeat;
+}
+
+.usluga-online {
+
+    background:
+        linear-gradient(rgba(255, 248, 244, 0.10),
+            rgba(255, 248, 244, 0.08)),
+        url('../img/service-online.jpg') center center / cover no-repeat;
+}
+
+.usluga-hero-inner {
+
+    width: 100%;
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    padding: 60px 70px;
+
+    border-radius: 34px;
+
+    background: rgba(255, 255, 255, 0.34);
+
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+
+    border: 1px solid rgba(255, 255, 255, 0.28);
+
+    box-shadow:
+        0 35px 100px rgba(0, 0, 0, 0.22);
+}
+
+.usluga-title {
+
+    font-size: clamp(46px, 5vw, 64px);
+
+    font-weight: 500;
+
+    color: #1a4144;
+
+    margin: 0;
+
+    display: inline-block;
+}
+
+.usluga-title::after {
+
+    content: "";
+
+    display: block;
+
+    width: 80px;
+    height: 6px;
+
+    margin: 20px auto 0;
+
+    background:
+        linear-gradient(#1a4144, #1a4144) top center / 60px 2px no-repeat,
+
+        linear-gradient(#1a4144, #1a4144) bottom center / 30px 2px no-repeat;
+}
+
+.usluga-subtitle {
+
+    font-size: 24px;
+
+    line-height: 1.9;
+
+    color: #1a4144;
+
+    max-width: 760px;
+
+    margin: 38px auto 0;
+
+    text-shadow:
+        0 1px 2px rgba(255, 255, 255, 0.25);
+}
+
+
+@media (max-width: 768px) {
+
+    .usluga-hero-inner {
+        padding: 42px 26px;
+    }
+
+    .usluga-title {
+
+        display: block;
+
+        text-align: center;
+
+        font-size: 38px;
+
+        margin: 0 auto;
+    }
+
+    .usluga-subtitle {
+
+        font-size: 18px;
+
+        line-height: 1.8;
+    }
+}
+
+/* =====================================================
+   INTRO SECTION
+===================================================== */
+
+.service-single-intro {
+
+    padding: 120px 20px;
+
+    background: #ffffff;
+
+}
+
+.service-single-grid {
+
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+
+    gap: 80px;
+
+    align-items: center;
+
+}
+
+.service-single-text h2 {
+
+    font-size: 38px;
+
+    font-weight: 500;
+
+    color: #2f5e62;
+
+    margin-bottom: 26px;
+
+}
+
+.service-single-text p {
+
+    font-size: 22px;
+    line-height: 1.9;
+
+    color: #444;
+
+    margin-bottom: 26px;
+
+}
+
+.service-single-image img {
+
+    width: 100%;
+    height: 520px;
+
+    object-fit: cover;
+
+    border-radius: 24px;
+
+    box-shadow:
+        0 40px 100px rgba(0, 0, 0, 0.12);
+
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 1100px) {
+
+    .service-single-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 60px;
+
+    }
+
+    .service-single-image img {
+
+        height: 420px;
+
+    }
+
+}
+
+@media (max-width: 425px) {
+
+    .service-single-intro {
+
+        padding: 70px 10px;
+
+    }
+
+    .service-single-grid {
+
+        gap: 40px;
+
+    }
+
+    .service-single-text h2 {
+
+        font-size: 32px;
+
+        margin-bottom: 18px;
+
+    }
+
+    .service-single-text p {
+
+        font-size: 20px;
+
+        line-height: 1.75;
+
+        margin-bottom: 18px;
+
+    }
+
+    .service-single-image img {
+
+        width: 100%;
+
+        height: auto;
+
+        max-height: 420px;
+
+        object-fit: contain;
+
+        border-radius: 18px;
+
+    }
+
+}
+/* =====================================================
+   TOPICS
+===================================================== */
+
+.service-single-topics {
+
+    padding: 120px 20px;
+
+    background: #f7e6e6;
+
+}
+
+.service-section-title {
+
+    font-size: 46px;
+    font-weight: 500;
+
+    text-align: center;
+
+    color: #2f5e62;
+
+    margin-bottom: 70px;
+
+}
+
+.service-section-title::after {
+
+    content: "";
+    display: block;
+
+    width: 80px;
+    height: 6px;
+
+    margin: 18px auto 0;
+
+    background:
+        linear-gradient(#2f5e62, #2f5e62) top center / 60px 2px no-repeat,
+        linear-gradient(#2f5e62, #2f5e62) bottom center / 30px 2px no-repeat;
+
+}
+
+.service-topics-grid {
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 28px;
+
+    max-width: 2560px;
+    margin: 0 auto;
+
+}
+
+.service-topic {
+
+    background: #ffffff;
+
+    padding: 26px 30px;
+
+    border-radius: 16px;
+
+    font-size: 20px;
+
+    color: #2f5e62;
+
+    text-align: center;
+
+    box-shadow:
+        0 18px 40px rgba(0, 0, 0, 0.08);
+
+    transition: transform .25s ease, box-shadow .25s ease;
+
+}
+
+.service-topic:hover {
+
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 30px 70px rgba(0, 0, 0, 0.14);
+
+}
+
+
+
+/* =====================================================
+   PROCESS
+===================================================== */
+
+.service-single-process {
+
+    padding: 130px 20px;
+
+    background: #ffffff;
+
+}
+
+.service-process-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 50px;
+
+    max-width: 2560px;
+
+    margin: 0 auto;
+
+    text-align: center;
+
+}
+
+.process-step {
+
+    position: relative;
+
+    padding: 40px 30px;
+
+}
+
+.process-number {
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 60px;
+    height: 60px;
+
+    border-radius: 50%;
+
+    background: #FFBD59;
+
+    color: #ffffff;
+
+    font-size: 26px;
+    font-weight: 600;
+
+    margin-bottom: 20px;
+
+    box-shadow:
+        0 12px 30px rgba(255, 189, 89, 0.35);
+
+}
+
+.process-step h3 {
+
+    font-size: 26px;
+
+    font-weight: 500;
+
+    color: #2f5e62;
+
+    margin-bottom: 14px;
+
+}
+
+.process-step p {
+
+    font-size: 20px;
+
+    line-height: 1.85;
+
+    color: #444;
+
+}
+
+@media (max-width: 425px) {
+
+    .service-single-process {
+        padding: 70px 10px;
+    }
+
+    .process-step {
+        padding: 14px 4px;
+    }
+
+    .process-step h3 {
+        margin-bottom: 10px;
+    }
+
+    .process-step p {
+        line-height: 1.7;
+    }
+
+}
+/* =====================================================
+   USLUGA CTA
+===================================================== */
+
+.usluga-cta {
+
+    width: 100vw;
+
+    margin-left: calc(50% - 50vw);
+
+    background: #fddca3;
+
+    color: #2f5e62;
+
+    padding: 70px 20px;
+
+    text-align: center;
+
+}
+
+.usluga-cta-inner {
+
+    max-width: 760px;
+
+    margin: 0 auto;
+
+}
+
+.usluga-cta h2 {
+
+    font-size: 40px;
+
+    font-weight: 500;
+
+    margin-bottom: 18px;
+
+}
+
+.usluga-cta h2::after {
+
+    content: "";
+
+    display: block;
+
+    width: 80px;
+    height: 6px;
+
+    margin: 18px auto 0;
+
+    background:
+        linear-gradient(#2f5e62, #2f5e62) top center / 60px 2px no-repeat,
+        linear-gradient(#2f5e62, #2f5e62) bottom center / 30px 2px no-repeat;
+
+}
+
+.usluga-cta p {
+
+    font-size: 22px;
+
+    line-height: 1.9;
+
+    max-width: 680px;
+
+    margin: 26px auto 36px;
+
+}
+
+.usluga-cta .btn {
+
+    font-size: 18px;
+
+    padding: 14px 34px;
+
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width:1100px) {
+
+    .service-single-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 60px;
+
+    }
+
+    .service-single-image img {
+
+        height: 420px;
+
+    }
+
+    .service-topics-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+    .service-process-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+
+    }
+
+}
+
+@media (max-width:768px) {
+
+    .service-single-title {
+        font-size: 40px;
+    }
+
+    .service-single-subtitle {
+        font-size: 20px;
+    }
+
+    .service-single-text h2 {
+        font-size: 32px;
+    }
+
+    .service-single-text p {
+        font-size: 20px;
+    }
+
+    .service-topic {
+        font-size: 19px;
+    }
+
+    .service-process-grid {
+        gap: 30px;
+    }
+
+    /* center topic cards */
+
+    .service-topics-grid {
+
+        justify-content: center;
+        justify-items: center;
+
+    }
+
+    /* make cards centered and narrower */
+
+    .service-topic {
+
+        max-width: 280px;
+        width: 100%;
+
+    }
+
+
+}
+
+/* Center intro text on mobile */
+
+.service-single-text {
+    text-align: center;
+}
+
+/* Center the intro title underline */
+
+.service-single-text h2::after {
+
+    content: "";
+
+    display: block;
+
+    width: 80px;
+    height: 6px;
+
+    margin: 18px auto 0;
+
+    background:
+        linear-gradient(#2f5e62, #2f5e62) top center / 60px 2px no-repeat,
+        linear-gradient(#2f5e62, #2f5e62) bottom center / 30px 2px no-repeat;
+
+}
+
+/* Center topics grid */
+
+.service-topics-grid {
+    justify-items: center;
+}
+
+/* Center process cards */
+
+.service-process-grid {
+    justify-items: center;
+}
+
+/* Make cards visually centered */
+
+.service-topic,
+.process-step {
+    text-align: center;
+}
