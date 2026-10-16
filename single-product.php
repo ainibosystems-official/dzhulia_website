@@ -78,13 +78,17 @@ get_header();
 
                     <h1 class="product-title"><?php the_title(); ?></h1>
 
-                    <div class="product-price">
-                        <?php echo $product->get_price_html(); ?>
-                    </div>
+<div class="product-price">
+    <?php echo $product->get_price_html(); ?>
+</div>
 
-                    <div class="product-short">
-                        <?php echo $product->get_short_description(); ?>
-                    </div>
+<div class="product-stock-status">
+    <?php echo wc_get_stock_html($product); ?>
+</div>
+
+<div class="product-short">
+    <?php echo $product->get_short_description(); ?>
+</div>
 
                 </div>
 
