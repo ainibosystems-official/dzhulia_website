@@ -256,9 +256,15 @@ add_filter('woocommerce_product_single_add_to_cart_text', function () {
   return 'Добави в количката';
 });
 
-add_filter('woocommerce_product_add_to_cart_text', function () {
+add_filter('woocommerce_product_add_to_cart_text', function ($text, $product) {
+
+  if ($product && !$product->is_in_stock()) {
+    return 'Изчерпан';
+  }
+
   return 'Добави в количката';
-});
+
+}, 10, 2);
 
 /* 🔥 ADD YOUR BTN CLASS */
 add_filter('woocommerce_product_single_add_to_cart_class', function ($classes) {
