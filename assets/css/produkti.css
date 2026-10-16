@@ -15,7 +15,7 @@
 .produkti-shell {
     width: 100%;
     max-width: none;
-    /* 🔥 removes container limit */
+    /* ðŸ”¥ removes container limit */
     margin: 0;
     padding: 0 0;
     /* keep breathing space */
@@ -378,10 +378,47 @@
     margin-top: auto;
 }
 
+/* =====================================================
+   PRODUCT STOCK STATUS
+===================================================== */
+
+.produkti-row-stock {
+    margin: -12px 0 26px;
+}
+
+.produkti-row-stock .stock {
+    display: inline-block;
+
+    padding: 10px 18px;
+    border-radius: 999px;
+
+    font-family: "Adys", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.2;
+
+    margin: 0;
+}
+
+.produkti-row-stock .stock.in-stock {
+    color: #4f8f53;
+    background: rgba(123, 196, 127, 0.16);
+}
+
+.produkti-row-stock .stock.out-of-stock {
+    color: #c96f6f;
+    background: rgba(226, 139, 139, 0.16);
+}
+
+@media (max-width: 900px) {
+    .produkti-row-stock {
+        text-align: center;
+    }
+}
 
 
 /* =====================================================
-   PRODUKTI BUTTONS — FINAL FIX (MATCH SERVICES 1:1)
+   PRODUKTI BUTTONS â€” FINAL FIX (MATCH SERVICES 1:1)
 ===================================================== */
 
 .produkti-btn,
@@ -401,7 +438,7 @@
     text-decoration: none;
 
     font-weight: 600 !important;
-    /* 🔥 FORCE FIX */
+    /* ðŸ”¥ FORCE FIX */
     font-size: 18px;
 
     text-align: center;
@@ -430,14 +467,14 @@
 
 
 /* =====================================================
-   SECONDARY BUTTON — FIXED COLOR + FONT
+   SECONDARY BUTTON â€” FIXED COLOR + FONT
 ===================================================== */
 
 .produkti-btn-secondary {
 
     background: rgba(0, 151, 178, 0.15) !important;
     color: var(--brand-teal) !important;
-    /* 🔥 FIX */
+    /* ðŸ”¥ FIX */
 
     font-weight: 600 !important;
 }
@@ -823,7 +860,7 @@
     z-index: 1;
 
     overflow: visible;
-    /* 🔥 CRITICAL */
+    /* ðŸ”¥ CRITICAL */
 
     transition:
         transform 0.25s ease-out,
@@ -876,9 +913,9 @@
     isolation: isolate;
 
     overflow: hidden;
-    /* 🔥 CRITICAL FIX */
+    /* ðŸ”¥ CRITICAL FIX */
     border-radius: 30px;
-    /* 🔥 MATCH IMAGE */
+    /* ðŸ”¥ MATCH IMAGE */
 }
 
 .produkti-row-media::before {
@@ -966,7 +1003,7 @@
 }
 
 /* =====================================================
-   PRODUKTI PRICE COLORS — MATCH SINGLE PRODUCT
+   PRODUKTI PRICE COLORS â€” MATCH SINGLE PRODUCT
 ===================================================== */
 
 /* NEW PRICE (green) */
