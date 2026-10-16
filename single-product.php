@@ -94,13 +94,12 @@ get_header();
 
             </div>
 
-        </section>
+                </section>
 
         <!-- ✅ WORKING AJAX ADD TO CART -->
         <div class="floating-cart">
             <div class="floating-cart-form">
 
-                <!-- Quantity -->
                 <div class="quantity">
                     <input
                         type="number"
@@ -110,7 +109,6 @@ get_header();
                         step="1">
                 </div>
 
-                <!-- AJAX Add to Cart Button -->
                 <a href="<?php echo esc_url($product->add_to_cart_url()); ?>"
                     class="single-ajax-cart single_add_to_cart_button button add_to_cart_button ajax_add_to_cart"
                     data-product_id="<?php echo esc_attr($product->get_id()); ?>"
@@ -126,7 +124,7 @@ get_header();
         <?php if (has_term('kutiq', 'product_cat')) : ?>
 
             <!-- KUTIQ CONTENT -->
-
+            
             <!-- BENEFITS -->
             <section class="product-benefits reveal">
 
