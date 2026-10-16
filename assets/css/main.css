@@ -2465,6 +2465,47 @@ body {
 }
 
 /* =====================================================
+   PRODUCT STOCK STATUS
+===================================================== */
+
+.product-stock-status {
+    margin: 18px 0 22px;
+}
+
+.product-stock-status .stock {
+    display: inline-block;
+    padding: 10px 18px;
+    border-radius: 999px;
+
+    font-family: "Adys", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+/* In stock */
+.product-stock-status .stock.in-stock {
+    color: #4f8f53;
+    background: rgba(123, 196, 127, 0.16);
+}
+
+/* Out of stock */
+.product-stock-status .stock.out-of-stock {
+    color: #c96f6f;
+    background: rgba(226, 139, 139, 0.16);
+}
+
+@media (max-width: 768px) {
+    .product-stock-status {
+        text-align: center;
+    }
+
+    .product-stock-status .stock {
+        font-size: 18px;
+        padding: 9px 16px;
+    }
+}
+/* =====================================================
    GLOBAL GOLD BUTTON (PREMIUM STYLE)
 ===================================================== */
 
