@@ -23,11 +23,11 @@ add_action('wp_enqueue_scripts', function () {
 
   /* Global CSS */
   wp_enqueue_style(
-    'aze-main',
-    $theme_uri . '/assets/css/main.css',
-    [],
-    '1.0'
-  );
+  'aze-main',
+  $theme_uri . '/assets/css/main.css',
+  [],
+  filemtime(get_template_directory() . '/assets/css/main.css')
+);
 
   /* About page */
   if (is_page('za-men')) {
@@ -82,21 +82,21 @@ add_action('wp_enqueue_scripts', function () {
     is_account_page()          // 🔥 ADD THIS
   ) {
     wp_enqueue_style(
-      'aze-produkti',
-      $theme_uri . '/assets/css/produkti.css',
-      ['aze-main'],
-      '1.0'
-    );
+  'aze-produkti',
+  $theme_uri . '/assets/css/produkti.css',
+  ['aze-main'],
+  filemtime(get_template_directory() . '/assets/css/produkti.css')
+);
   }
 
   /* Single product page */
   if (is_product()) {
     wp_enqueue_style(
-      'aze-single-product',
-      $theme_uri . '/assets/css/single-product.css',
-      ['aze-main'],
-      '1.0'
-    );
+  'aze-single-product',
+  $theme_uri . '/assets/css/single-product.css',
+  ['aze-main'],
+  filemtime(get_template_directory() . '/assets/css/single-product.css')
+);
   }
 
   /* Cart Page */
